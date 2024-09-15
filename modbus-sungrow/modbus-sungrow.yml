@@ -5,6 +5,11 @@
 #
 # Note: 
 
+
+type: pv
+# possible typs
+# mainmeter, pv, battery, usage, charger
+
 host: !parameter
 adr: !parameter
 port: 502
