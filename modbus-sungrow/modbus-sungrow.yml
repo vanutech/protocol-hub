@@ -5,300 +5,276 @@
 #
 # Note: 
 
-modbus:
-  - name: SungrowSHx
-    type: tcp
-    host: !secret sungrow_modbus_host_ip
-    port: 502
-    sensors:
-      - name: Sungrow device type code
-        unique_id: sg_dev_code
-        device_address: !secret sungrow_modbus_slave
-        address: 4999 # reg 5000
-        input_type: input
-        data_type: uint16
-        scan_interval: 600
+host: !parameter
+adr: !parameter
+port: 502
+protocol:
+  - name: Sungrow device type code
+    unique_id: sg_dev_code
+    address: 4999 # reg 5000
+    input_type: input
+    data_type: uint16
+    scan_interval: 600
 
-      - name: Daily PV generation & battery discharge
-        unique_id: sg_daily_pv_gen_battery_discharge
-        device_address: !secret sungrow_modbus_slave
-        address: 5002 # reg 5003
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: kWh
-        device_class: energy
-        state_class: total_increasing
-        scale: 0.1
-        scan_interval: 600
+  - name: Daily PV generation & battery discharge
+    unique_id: sg_daily_pv_gen_battery_discharge
+    address: 5002 # reg 5003
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.1
+    scan_interval: 600
 
-      - name: Total PV generation & battery discharge
-        unique_id: sg_total_pv_gen_battery_discharge
-        device_address: !secret sungrow_modbus_slave
-        address: 5003 # reg 5004
-        input_type: input
-        data_type: uint32
-        swap: word
-        unit_of_measurement: kWh
-        precision: 1
-        device_class: energy
-        state_class: total
-        scale: 0.1
-        scan_interval: 600
+  - name: Total PV generation & battery discharge
+    unique_id: sg_total_pv_gen_battery_discharge
+    address: 5003 # reg 5004
+    input_type: input
+    data_type: uint32
+    swap: word
+    unit_of_measurement: kWh
+    precision: 1
+    device_class: energy
+    state_class: total
+    scale: 0.1
+    scan_interval: 600
 
-      - name: Inverter temperature
-        unique_id: sg_inverter_temperature
-        device_address: !secret sungrow_modbus_slave
-        address: 5007 # reg 5008
-        input_type: input
-        data_type: int16
-        precision: 1
-        unit_of_measurement: °C
-        device_class: Temperature
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: Inverter temperature
+    unique_id: sg_inverter_temperature
+    address: 5007 # reg 5008
+    input_type: input
+    data_type: int16
+    precision: 1
+    unit_of_measurement: °C
+    device_class: Temperature
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: MPPT1 voltage
-        unique_id: sg_mppt1_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5010 # reg 5011
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: V
-        device_class: Voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: MPPT1 voltage
+    unique_id: sg_mppt1_voltage
+    address: 5010 # reg 5011
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: V
+    device_class: Voltage
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: MPPT1 current
-        unique_id: sg_mppt1_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5011 # reg 5012
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: A
-        device_class: Current
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: MPPT1 current
+    unique_id: sg_mppt1_current
+    address: 5011 # reg 5012
+    input_type: input
+    data_type: uint16
+    precision: 2
+    unit_of_measurement: A
+    device_class: Current
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: MPPT2 voltage
-        unique_id: sg_mppt2_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5012 # reg 5013
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: V
-        device_class: Voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: MPPT2 voltage
+    unique_id: sg_mppt2_voltage
+    address: 5012 # reg 5013
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: V
+    device_class: Voltage
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: MPPT2 current
-        unique_id: sg_mppt2_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5013 # reg 5014
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: A
-        device_class: Current
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: MPPT2 current
+    unique_id: sg_mppt2_current
+    address: 5013 # reg 5014
+    input_type: input
+    data_type: uint16
+    precision: 2
+    unit_of_measurement: A
+    device_class: Current
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: Total DC power
-        unique_id: sg_total_dc_power
-        device_address: !secret sungrow_modbus_slave
-        address: 5016 # reg 5017
-        input_type: input
-        data_type: uint32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  - name: Total DC power
+    unique_id: sg_total_dc_power
+    address: 5016 # reg 5017
+    input_type: input
+    data_type: uint32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: Phase A voltage
-        unique_id: sg_phase_a_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5018 # reg: 5019
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: V
-        device_class: Voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: Phase A voltage
+    unique_id: sg_phase_a_voltage
+    address: 5018 # reg: 5019
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: V
+    device_class: Voltage
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: Phase B voltage
-        unique_id: sg_phase_b_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5019 # reg: 5020
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: V
-        device_class: Voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: Phase B voltage
+    unique_id: sg_phase_b_voltage
+    address: 5019 # reg: 5020
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: V
+    device_class: Voltage
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: Phase C voltage
-        unique_id: sg_phase_c_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5020 # reg: 5021
-        input_type: input
-        data_type: uint16
-        precision: 1
-        unit_of_measurement: V
-        device_class: Voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: Phase C voltage
+    unique_id: sg_phase_c_voltage
+    address: 5020 # reg: 5021
+    input_type: input
+    data_type: uint16
+    precision: 1
+    unit_of_measurement: V
+    device_class: Voltage
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: Grid frequency
-        unique_id: sg_grid_frequency
-        device_address: !secret sungrow_modbus_slave
-        address: 5035 # reg 5036
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: "Hz"
-        device_class: frequency
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 10
+  - name: Grid frequency
+    unique_id: sg_grid_frequency
+    address: 5035 # reg 5036
+    input_type: input
+    data_type: uint16
+    precision: 2
+    unit_of_measurement: "Hz"
+    device_class: frequency
+    state_class: measurement
+    scale: 0.1
+    scan_interval: 10
 
-      - name: Reactive power
-        unique_id: sg_reactive_power
-        device_address: !secret sungrow_modbus_slave
-        address: 5032 # reg 5033
-        input_type: input
-        data_type: int32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  - name: Reactive power
+    unique_id: sg_reactive_power
+    address: 5032 # reg 5033
+    input_type: input
+    data_type: int32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: Power factor
-        unique_id: sg_power_factor
-        device_address: !secret sungrow_modbus_slave
-        address: 5034 # reg 5035
-        input_type: input
-        data_type: int16
-        precision: 3
-        unit_of_measurement: "%"
-        device_class: power_factor
-        state_class: measurement
-        scale: 0.001
-        scan_interval: 10
+  - name: Power factor
+    unique_id: sg_power_factor
+    address: 5034 # reg 5035
+    input_type: input
+    data_type: int16
+    precision: 3
+    unit_of_measurement: "%"
+    device_class: power_factor
+    state_class: measurement
+    scale: 0.001
+    scan_interval: 10
 
-      #https://www.photovoltaikforum.com/thread/166134-daten-lesen-vom-sungrow-wechselrichtern-modbus/?pageNo=13
-      #Meter Active Power: 5601-5602 S32 W (Energiezähler Wirkleistung)
-      #Meter Phase A Active Power: 5603-5604 S32 W (Stromzähler Phase A Wirkleistung)
-      #Meter Phase B Active Power: 5605-5606 S32 W (Stromzähler Phase B Wirkleistung)
-      #Meter Phase C Active Power: 5607-5608 S32 W (Stromzähler Phase C Wirkleistung)
-      - name: Meter active power raw
-        unique_id: sg_meter_active_power_raw
-        device_address: !secret sungrow_modbus_slave
-        address: 5600 # reg 5601
-        input_type: input
-        data_type: int32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  #https://www.photovoltaikforum.com/thread/166134-daten-lesen-vom-sungrow-wechselrichtern-modbus/?pageNo=13
+  #Meter Active Power: 5601-5602 S32 W (Energiezähler Wirkleistung)
+  #Meter Phase A Active Power: 5603-5604 S32 W (Stromzähler Phase A Wirkleistung)
+  #Meter Phase B Active Power: 5605-5606 S32 W (Stromzähler Phase B Wirkleistung)
+  #Meter Phase C Active Power: 5607-5608 S32 W (Stromzähler Phase C Wirkleistung)
+  - name: Meter active power raw
+    unique_id: sg_meter_active_power_raw
+    address: 5600 # reg 5601
+    input_type: input
+    data_type: int32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: Meter phase A active power raw
-        unique_id: sg_meter_phase_a_active_power_raw
-        device_address: !secret sungrow_modbus_slave
-        address: 5602 # reg 5603
-        input_type: input
-        data_type: int32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  - name: Meter phase A active power raw
+    unique_id: sg_meter_phase_a_active_power_raw
+    address: 5602 # reg 5603
+    input_type: input
+    data_type: int32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: Meter phase B active power raw
-        unique_id: sg_meter_phase_b_active_power_raw
-        device_address: !secret sungrow_modbus_slave
-        address: 5604 # reg 5605
-        input_type: input
-        data_type: int32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  - name: Meter phase B active power raw
+    unique_id: sg_meter_phase_b_active_power_raw
+    address: 5604 # reg 5605
+    input_type: input
+    data_type: int32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: Meter phase C active power raw
-        unique_id: sg_meter_phase_c_active_power_raw
-        device_address: !secret sungrow_modbus_slave
-        address: 5606 # reg 5607
-        input_type: input
-        data_type: int32
-        swap: word
-        precision: 0
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        scale: 1
-        scan_interval: 10
+  - name: Meter phase C active power raw
+    unique_id: sg_meter_phase_c_active_power_raw
+    address: 5606 # reg 5607
+    input_type: input
+    data_type: int32
+    swap: word
+    precision: 0
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+    scale: 1
+    scan_interval: 10
 
-      - name: BDC rated power
-        unique_id: sg_bdc_rated_power
-        device_address: !secret sungrow_modbus_slave
-        address: 5627 # reg 5628
-        input_type: input
-        data_type: uint16
-        unit_of_measurement: "W"
-        device_class: power
-        state_class: measurement
-        scale: 100
-        scan_interval: 600
+  - name: BDC rated power
+    unique_id: sg_bdc_rated_power
+    address: 5627 # reg 5628
+    input_type: input
+    data_type: uint16
+    unit_of_measurement: "W"
+    device_class: power
+    state_class: measurement
+    scale: 100
+    scan_interval: 600
 
-      - name: BMS max. charging current
-        unique_id: sg_bms_max_charging_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5634 # reg 5635
-        input_type: input
-        data_type: uint16
-        precision: 0
-        unit_of_measurement: A
-        device_class: Current
-        state_class: measurement
-        scale: 1
-        scan_interval: 60
+  - name: BMS max. charging current
+    unique_id: sg_bms_max_charging_current
+    address: 5634 # reg 5635
+    input_type: input
+    data_type: uint16
+    precision: 0
+    unit_of_measurement: A
+    device_class: Current
+    state_class: measurement
+    scale: 1
+    scan_interval: 60
 
-      - name: BMS max. discharging current
-        unique_id: sg_bms_max_discharging_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5635 # reg 5636
-        input_type: input
-        data_type: uint16
-        precision: 0
-        unit_of_measurement: A
-        device_class: Current
-        state_class: measurement
-        scale: 1
-        scan_interval: 60
+  - name: BMS max. discharging current
+    unique_id: sg_bms_max_discharging_current
+    address: 5635 # reg 5636
+    input_type: input
+    data_type: uint16
+    precision: 0
+    unit_of_measurement: A
+    device_class: Current
+    state_class: measurement
+    scale: 1
+    scan_interval: 60
