@@ -13,7 +13,7 @@ type: pv
 host: !parameter
 adr: !parameter
 port: 502
-protocol:
+prcl: #protocol
   - name: Sungrow device type code
     unique_id: sg_dev_code
     address: 4999 # reg 5000
