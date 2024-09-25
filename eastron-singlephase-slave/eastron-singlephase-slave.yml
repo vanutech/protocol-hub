@@ -1,0 +1,93 @@
+# Zato Eastron single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+type: vp
+# possible typs
+# SW, //switch or relay on off
+# PS, //proportional switch
+# VP, //valut of power
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+p": E
+
+#device specifics
+adr: !parameter
+
+prcl: #protocol
+  - name: Line to neutral volts
+    unit: V
+    value: 230
+    address: 0
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Current
+    unit: A
+    value: P/230
+    address: 6
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Active power
+    unit: W
+    value: P
+    address: 12
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Apparent power
+    unit: VA
+    value: P
+    address: 18
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Reactive power
+    unit: VAr
+    value: 0
+    address: 24
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Power factor
+    unit: ''
+    value: 1
+    address: 30
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+    datacollectolocation: 1986342194
+  - name: Phase angle
+    unit: "°"
+    value: 0
+    address: 36
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Frequency
+    unit: Hz
+    value: 50
+    address: 70
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Import active energy
+    unit: kwh
+    value: 0
+    address: 72
+    reg_size: 2
+    data_type: 3
+    data_size: 4
+  - name: Import active energ
+    unit: kwh
+    value: 0
+    address: 70
+    reg_size: 4
+    data_type: 3
+    data_size: 4
