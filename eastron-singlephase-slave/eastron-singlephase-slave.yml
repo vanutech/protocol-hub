@@ -5,7 +5,7 @@
 #
 # Note: 
 
-type: vp
+type: ValuePower
 # possible typs
 # SW, //switch or relay on off
 # PS, //proportional switch
