@@ -24,29 +24,29 @@ prcl: #protocol
     value: 1
     address: 0
     data_type: uint16
-    register_type: holding
+    input_type: holding
     
   - name: Voltage
     unit: V
     value: 230
     address: 14
     data_type: float
-    register_type: holding
+    input_type: holding
   - name: Current
     unit: A
     value: P/230
     address: 16
     data_type: float
-    register_type: holding
+    input_type: holding
   - name: Active power
     unit: W
     value: P
     address: 18
     data_type: float
-    register_type: holding
+    input_type: holding
     
   - name: End
     value: 0
     address: 70
     data_type: uint16
-    register_type: holding
+    input_type: holding
