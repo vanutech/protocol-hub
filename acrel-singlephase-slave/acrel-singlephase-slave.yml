@@ -1,0 +1,52 @@
+# Zato Eastron single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+type: ValuePower
+# possible typs
+# SW, //switch or relay on off
+# PS, //proportional switch
+# VP, //valut of power
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+prcl: #protocol
+  - name: Start (meter adres)
+    value: 1
+    address: 0
+    data_type: uint16
+    register_type: holding
+    
+  - name: Voltage
+    unit: V
+    value: 230
+    address: 14
+    data_type: float
+    register_type: holding
+  - name: Current
+    unit: A
+    value: P/230
+    address: 16
+    data_type: float
+    register_type: holding
+  - name: Active power
+    unit: W
+    value: P
+    address: 18
+    data_type: float
+    register_type: holding
+    
+  - name: End
+    value: 0
+    address: 70
+    data_type: uint16
+    register_type: holding

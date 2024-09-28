@@ -14,7 +14,7 @@ type: ValuePower
 #connection specifics (modbus)
 Bd: 9600
 by: 8
-p": E
+pa: E
 
 #device specifics
 adr: !parameter
