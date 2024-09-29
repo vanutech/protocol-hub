@@ -20,31 +20,80 @@ pa: N
 adr: !parameter
 
 prcl: #protocol
-  - name: Start (meter adres)
-    value: 1
+  - name: Start (energy)
+    value: 0
     address: 0
+    data_type: uint16
+    input_type: holding
+  - name: Code
+    value: 1
+    address: 10
     data_type: uint16
     input_type: holding
     
   - name: Voltage
     unit: V
     value: 230
-    address: 14
-    data_type: float
+    address: 11
+    data_type: uint16
+    divide: 10
     input_type: holding
   - name: Current
     unit: A
     value: P/230
-    address: 16
-    data_type: float
+    address: 12
+    data_type: uint16
+    divide: 1000
     input_type: holding
+
   - name: Active power
     unit: W
     value: P
-    address: 18
-    data_type: float
+    address: 13
+    data_type: uint16
+    divide: 1
     input_type: holding
+  - name: Reactive power
+    unit: W
+    value: P
+    address: 14
+    data_type: uint16
+    divide: 1
+    input_type: holding
+  - name: Apparent power
+    unit: W
+    value: P
+    address: 15
+    data_type: uint16
+    divide: 1
+    input_type: holding
+  - name: PowerFactor
+    value: 1
+    address: 16
+    data_type: uint16
+    divide: 100
+    input_type: holding
+  - name: Frequency
+    value: 50
+    address: 17
+    data_type: uint16
+    divide: 100
+    input_type: holding
+
+  - name: Adress and Baudrate
+    value: 257
+    address: 21
+    data_type: uint16
+    input_type: holding
+
     
+  - name: Adress and Baudrate
+    value: 257
+    address: 21
+    data_type: uint16
+    input_type: holding
+
+
   - name: End
     value: 0
     address: 70
