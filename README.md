@@ -14,5 +14,21 @@ This repo includes protocols for modbus rtu, tcp and more. Protocol is written i
 
 
 ## syntax yaml file
+yaml file are unique for each connection type
 
+
+
+
+### modbus
+
+type: pv #sensor types
+host: !parameter
+adr: !parameter
+port: 502
+prcl: #protocol
+  - unique_id: Reserve1
+    address: 5002 
+    input_type: input
+    data_type: uint16
+    scale: 0.1
 
