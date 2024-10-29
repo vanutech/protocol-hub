@@ -14,8 +14,10 @@ type: ValuePower
 #connection specifics (modbus)
 
 
-#device specifics
+
+host: !parameter
 adr: !parameter
+port: 502
 
 prcl: #protocol
   - name: Start (energy)
