@@ -22,80 +22,77 @@ port: 502
 prcl: #protocol
   - name: Start (energy)
     value: 0
-    address: 0
+    address: 50512
     data_type: uint16
     input_type: holding
-  - name: Code
-    value: 1
-    address: 10
-    data_type: uint16
+
+
+  - name: Current
+    unit: mA
+    value: P/230
+    address: 50528
+    data_type: uint32
+    divide: 1000
+    input_type: holding
+  - name: In Current
+    unit: mA
+    value: P/230
+    address: 50534
+    data_type: uint32
+    divide: 1000
     input_type: holding
     
   - name: Voltage
     unit: V
     value: 230
-    address: 11
-    data_type: uint16
-    divide: 10
+    address: 50520
+    data_type: uint32
+    divide: 100
     input_type: holding
-  - name: Current
-    unit: A
-    value: P/230
-    address: 12
-    data_type: uint16
-    divide: 1000
-    input_type: holding
+
+
 
   - name: Active power
     unit: W
     value: P
-    address: 13
-    data_type: uint16
-    divide: 1
+    address: 50544
+    data_type: uint32
+    divide: 0.1
     input_type: holding
+
   - name: Reactive power
     unit: W
     value: P
-    address: 14
-    data_type: uint16
-    divide: 1
+    address: 50550
+    data_type: uint32
+    divide: 0.1
     input_type: holding
+
   - name: Apparent power
     unit: W
     value: P
-    address: 15
-    data_type: uint16
-    divide: 1
+    address: 50556
+    data_type: uint32
+    divide: 0.1
     input_type: holding
+
   - name: PowerFactor
     value: 1
-    address: 16
-    data_type: uint16
-    divide: 100
+    address: 50562
+    data_type: int32
+    divide: 1000
     input_type: holding
+
   - name: Frequency
     value: 50
-    address: 17
-    data_type: uint16
+    address: 50526
+    data_type: uint32
     divide: 100
-    input_type: holding
-
-  - name: Adress and Baudrate
-    value: 257
-    address: 21
-    data_type: uint16
-    input_type: holding
-
-    
-  - name: Adress and Baudrate
-    value: 257
-    address: 21
-    data_type: uint16
     input_type: holding
 
 
   - name: End
     value: 0
-    address: 70
-    data_type: uint16
+    address: 50572
+    data_type: uint32
     input_type: holding
