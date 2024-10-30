@@ -22,14 +22,14 @@ port: 502
 prcl: #protocol
   - name: Start (energy)
     value: 0
-    address: 50511
+    address: 50512
     data_type: uint16
     input_type: holding
 
   - name: Current
     unit: mA
     value: P/230
-    address: 50527
+    address: 50529
     data_type: uint32
     divide: 1000
     input_type: holding
@@ -37,7 +37,7 @@ prcl: #protocol
   - name: In Current
     unit: mA
     value: P/230
-    address: 50533
+    address: 50535
     data_type: uint32
     divide: 1000
     input_type: holding
@@ -45,7 +45,7 @@ prcl: #protocol
   - name: Voltage
     unit: V
     value: 230
-    address: 50519
+    address: 50521
     data_type: uint32
     divide: 100
     input_type: holding
@@ -55,7 +55,7 @@ prcl: #protocol
   - name: Active power
     unit: W
     value: P
-    address: 50543
+    address: 50545
     data_type: uint32
     divide: 0.1
     input_type: holding
@@ -63,7 +63,7 @@ prcl: #protocol
   - name: Reactive power
     unit: W
     value: P
-    address: 50549
+    address: 50551
     data_type: uint32
     divide: 0.1
     input_type: holding
@@ -71,21 +71,21 @@ prcl: #protocol
   - name: Apparent power
     unit: W
     value: P
-    address: 50555
+    address: 50557
     data_type: uint32
     divide: 0.1
     input_type: holding
 
   - name: PowerFactor
     value: 1
-    address: 50561
+    address: 50563
     data_type: int32
     divide: 1000
     input_type: holding
 
   - name: Frequency
     value: 50
-    address: 50525
+    address: 50527
     data_type: uint32
     divide: 100
     input_type: holding
@@ -93,6 +93,6 @@ prcl: #protocol
 
   - name: End
     value: 0
-    address: 50573
+    address: 50574
     data_type: uint32
     input_type: holding
