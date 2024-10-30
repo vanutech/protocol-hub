@@ -44,7 +44,7 @@ prcl: #protocol
     
   - name: Voltage
     unit: V
-    value: 500000
+    value: 230
     address: 50521
     data_type: uint32
     divide: 100
@@ -87,7 +87,7 @@ prcl: #protocol
     value: 50
     address: 50527
     data_type: uint32
-    divide: 10
+    divide: 1000
     input_type: holding
 
 
