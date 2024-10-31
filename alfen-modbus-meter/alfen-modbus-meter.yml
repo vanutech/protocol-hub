@@ -28,7 +28,7 @@ prcl: #protocol
 
   - name: Current
     unit: mA
-    value: P/230
+    value: I
     address: 50529
     data_type: uint32
     divide: 1000
@@ -36,7 +36,7 @@ prcl: #protocol
 
   - name: In Current
     unit: mA
-    value: P/230
+    value: In
     address: 50535
     data_type: uint32
     divide: 1000
@@ -44,7 +44,7 @@ prcl: #protocol
     
   - name: Voltage
     unit: V
-    value: 230
+    value: U
     address: 50521
     data_type: uint32
     divide: 100
@@ -62,7 +62,7 @@ prcl: #protocol
 
   - name: Reactive power
     unit: W
-    value: P
+    value: Q
     address: 50551
     data_type: uint32
     divide: 0.1
@@ -70,21 +70,21 @@ prcl: #protocol
 
   - name: Apparent power
     unit: W
-    value: P
+    value: S
     address: 50557
     data_type: uint32
     divide: 0.1
     input_type: holding
 
   - name: PowerFactor
-    value: 1
+    value: PF
     address: 50563
     data_type: int32
     divide: 1000
     input_type: holding
 
   - name: Frequency
-    value: 50
+    value: F
     address: 50527
     data_type: uint32
     divide: 1000
