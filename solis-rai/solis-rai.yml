@@ -13,6 +13,7 @@ pa: N
 
 #device specifics
 adr: !parameter
+type: battery
 
 prcl: #protocol
   - name: Active power
