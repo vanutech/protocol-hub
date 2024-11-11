@@ -5,6 +5,7 @@
 #
 # Note: 
 
+pri: sensor
 
 #connection specifics (modbus)
 Bd: 9600

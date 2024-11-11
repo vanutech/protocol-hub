@@ -6,6 +6,8 @@
 # Note: 
 
 
+pri: sungrow
+
 type: pv
 # possible typs
 # mainmeter, pv, battery, usage, charger

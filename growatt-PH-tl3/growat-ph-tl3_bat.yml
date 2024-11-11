@@ -6,6 +6,7 @@
 # Note: 
 
 
+pri: sensor
 #connection specifics (modbus)
 Bd: 9600
 by: 8
@@ -54,6 +55,6 @@ prcl: #protocol
     input_type: input
 
   - name: End
-    address: 33167
+    address: 1062
     data_type: uint16
     input_type: input

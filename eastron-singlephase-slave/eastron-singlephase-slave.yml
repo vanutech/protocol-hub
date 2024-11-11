@@ -11,6 +11,8 @@ type: ValuePower
 # PS, //proportional switch
 # VP, //valut of power
 
+pri: actuator
+
 #connection specifics (modbus)
 Bd: 9600
 by: 8

@@ -5,6 +5,7 @@
 #
 # Note: 
 
+pri: sensor
 modbus:
   - name: Eastron Single Phase
     type: rtu

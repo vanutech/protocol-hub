@@ -13,8 +13,7 @@ type: ValuePower
 
 #connection specifics (modbus)
 
-
-
+pri: actuator
 host: !parameter
 adr: !parameter
 port: 502
