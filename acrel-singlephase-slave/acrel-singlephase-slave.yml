@@ -27,6 +27,7 @@ prcl: #protocol
     address: 0
     data_type: uint16
     input_type: holding
+
   - name: Code
     value: 1
     address: 10
@@ -35,14 +36,15 @@ prcl: #protocol
     
   - name: Voltage
     unit: V
-    value: 230
+    value: U
     address: 11
     data_type: uint16
     divide: 10
     input_type: holding
+
   - name: Current
     unit: A
-    value: P/230
+    value: I
     address: 12
     data_type: uint16
     divide: 1000
@@ -55,28 +57,31 @@ prcl: #protocol
     data_type: uint16
     divide: 1
     input_type: holding
+
   - name: Reactive power
     unit: W
-    value: P
+    value: Q
     address: 14
     data_type: uint16
     divide: 1
     input_type: holding
   - name: Apparent power
     unit: W
-    value: P
+    value: S
     address: 15
     data_type: uint16
     divide: 1
     input_type: holding
+
   - name: PowerFactor
-    value: 1
+    value: PF
     address: 16
     data_type: uint16
     divide: 100
     input_type: holding
+
   - name: Frequency
-    value: 50
+    value: F
     address: 17
     data_type: uint16
     divide: 100
