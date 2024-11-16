@@ -47,7 +47,7 @@ prcl: #protocol
     value: I
     address: 12
     data_type: uint16
-    divide: 1000
+    divide: 100
     input_type: holding
 
   - name: Active power
