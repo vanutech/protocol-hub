@@ -1,0 +1,98 @@
+# Zato Eastron single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+type: ValuePower
+# possible typs
+# SW, //switch or relay on off
+# PS, //proportional switch
+# VP, //valut of power
+
+#connection specifics (modbus)
+
+pri: actuator
+host: !parameter
+adr: !parameter
+port: 502
+isMaster: 1
+
+prcl: #protocol
+  - name: Start (energy)
+    value: 0
+    address: 50512
+    data_type: uint16
+    input_type: holding
+
+  - name: Current
+    unit: mA
+    value: I
+    address: 50529
+    data_type: uint32
+    divide: 1000
+    input_type: holding
+
+  - name: In Current
+    unit: mA
+    value: In
+    address: 50535
+    data_type: uint32
+    divide: 1000
+    input_type: holding
+    
+  - name: Voltage
+    unit: V
+    value: U
+    address: 50521
+    data_type: uint32
+    divide: 100
+    input_type: holding
+
+
+
+  - name: Active power
+    unit: W
+    value: P
+    address: 50545
+    data_type: uint32
+    divide: 0.1
+    input_type: holding
+
+  - name: Reactive power
+    unit: W
+    value: Q
+    address: 50551
+    data_type: uint32
+    divide: 0.1
+    input_type: holding
+
+  - name: Apparent power
+    unit: W
+    value: S
+    address: 50557
+    data_type: uint32
+    divide: 0.1
+    input_type: holding
+
+  - name: PowerFactor
+    value: PF
+    address: 50563
+    data_type: int32
+    divide: 1000
+    input_type: holding
+
+  - name: Frequency
+    value: F
+    address: 50527
+    data_type: uint32
+    divide: 1000
+    input_type: holding
+
+
+  - name: End
+    value: 0
+    address: 50574
+    data_type: uint32
+    input_type: holding
