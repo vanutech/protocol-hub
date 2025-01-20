@@ -1,5 +1,0 @@
-D (252267) MB_TCP_SLAVE_PORT: | TID = 0001 | PID = 0000 | LEN = 0006 | UID = 01 | FUNC = 03 | DATA = C5520036 |
-
-starting adres = 50514
-length = 54
-
