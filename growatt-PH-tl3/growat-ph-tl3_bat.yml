@@ -22,13 +22,13 @@ prcl: #protocol
     unique_id: Power
     address: 1009
     data_type: uint32
-    divide: 1
+    divide: 10
     input_type: input
 
   - name: Charge power
     address: 1011
     data_type: uint32
-    divide: 1
+    divide: 10
     input_type: input
 
   - name: Battery soc
