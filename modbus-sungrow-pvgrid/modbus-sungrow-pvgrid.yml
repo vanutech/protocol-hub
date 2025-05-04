@@ -6,7 +6,7 @@
 # Note: 
 
 
-pri: sungrow
+pri: sensor
 
 type: pv
 # possible typs
