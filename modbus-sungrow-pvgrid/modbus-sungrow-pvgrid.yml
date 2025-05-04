@@ -27,7 +27,8 @@ prcl: #protocol
     device_class: energy
     state_class: total_increasing
     scale: 0.1
-    scan_interval: 600
+    endianness: little-endian
+    
 
   - name: Total PV generation & battery discharge
     unique_id: Energy
@@ -40,7 +41,8 @@ prcl: #protocol
     device_class: energy
     state_class: total
     scale: 1
-    scan_interval: 600
+    endianness: little-endian
+    
 
   - name: Inverter temperature
     unique_id: sg_inverter_temperature
@@ -52,7 +54,8 @@ prcl: #protocol
     device_class: Temperature
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: MPPT1 voltage
     unique_id: Reserve2
@@ -64,7 +67,8 @@ prcl: #protocol
     device_class: Voltage
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: MPPT1 current
     unique_id: Reserve3
@@ -76,7 +80,8 @@ prcl: #protocol
     device_class: Current
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: MPPT2 voltage
     unique_id: Reserve4
@@ -88,7 +93,8 @@ prcl: #protocol
     device_class: Voltage
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: MPPT2 current
     unique_id: Reserve5
@@ -100,7 +106,8 @@ prcl: #protocol
     device_class: Current
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Total DC power
     unique_id: sg_total_dc_power
@@ -113,7 +120,8 @@ prcl: #protocol
     device_class: power
     state_class: measurement
     scale: 1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Phase A voltage
     unique_id: sg_phase_a_voltage
@@ -125,7 +133,8 @@ prcl: #protocol
     device_class: Voltage
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Phase B voltage
     unique_id: Reserve8
@@ -137,7 +146,8 @@ prcl: #protocol
     device_class: Voltage
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Phase C voltage
     unique_id: Reserve9
@@ -149,7 +159,8 @@ prcl: #protocol
     device_class: Voltage
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
 
 
   - name: Reactive power
@@ -163,7 +174,8 @@ prcl: #protocol
     device_class: power
     state_class: measurement
     scale: 1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Active power
     unique_id: Power
@@ -176,7 +188,8 @@ prcl: #protocol
     device_class: power
     state_class: measurement
     scale: 1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Reactive power
     unique_id: sg_reactive_power
@@ -189,7 +202,8 @@ prcl: #protocol
     device_class: power
     state_class: measurement
     scale: 1
-    scan_interval: 10
+    endianness: little-endian
+    
 
   - name: Power factor
     unique_id: sg_power_factor
@@ -201,7 +215,8 @@ prcl: #protocol
     device_class: power_factor
     state_class: measurement
     scale: 0.001
-    scan_interval: 10  
+    endianness: little-endian
+      
 
   - name: Grid frequency
     unique_id: sg_grid_frequency
@@ -213,4 +228,5 @@ prcl: #protocol
     device_class: frequency
     state_class: measurement
     scale: 0.1
-    scan_interval: 10
+    endianness: little-endian
+    
