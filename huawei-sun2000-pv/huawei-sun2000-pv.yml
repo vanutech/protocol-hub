@@ -22,39 +22,28 @@ prcl: #protocol
 
   - name: reserve1
     unique_id: Reserve1
-    address: 32061
+    address: 32062
     data_type: int32
     input_type: holding
   
   - name: Active power
     unique_id: Power
-    address: 32063
+    address: 32064
     data_type: int32
     input_type: holding
 
   - name: reserve2
     unique_id: Reserve2
-    address: 32065
+    address: 32066
     data_type: int32
     input_type: holding
-  - name: reserve3
-    unique_id: Reserve3
-    address: 32104
-    data_type: int32
-    input_type: holding
-  
+    
   - name: Total energy generated
     unit: kWh
     unique_id: Energy
     address: 32106
     divide: 100
     data_type: uint32
-    input_type: holding
-
-  - name: reserve4
-    unique_id: Reserve4
-    address: 32108
-    data_type: int32
     input_type: holding
 
   - name: End
