@@ -20,7 +20,7 @@ type: pv
 prcl: #protocol
   - name: Active power
     unique_id: Power
-    address: 32065
+    address: 32063
     data_type: int32
     input_type: holding
 
