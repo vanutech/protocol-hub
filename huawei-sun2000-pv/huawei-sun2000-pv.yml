@@ -22,7 +22,7 @@ prcl: #protocol
     unique_id: Power
     address: 32065
     data_type: int32
-    input_type: input
+    input_type: holding
 
   - name: Total energy generated
     unit: kWh
@@ -30,9 +30,9 @@ prcl: #protocol
     address: 32106
     divide: 100
     data_type: uint32
-    input_type: input
+    input_type: holding
 
   - name: End
     address: 32110
     data_type: uint16
-    input_type: input
+    input_type: holding
