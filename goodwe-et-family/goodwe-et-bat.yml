@@ -1,0 +1,55 @@
+# goodwe et familybattery sensor
+# 
+# by Wouter vanoverberghe
+# last update: 2024-11-01
+#
+# Note: 
+
+
+pri: sensor
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: battery
+
+
+prcl: #protocol
+
+  - name: Power
+    unique_id: Power
+    address: 35182
+    data_type: int32
+    divide: 1
+    input_type: input
+
+  - name: Total battery charge
+    unit: kWh
+    unique_id: Energy_charge
+    address: 35206
+    divide: 1
+    data_type: uint32
+    input_type: input
+
+  - name: Total battery discharge
+    unit: kWh
+    unique_id: Energy_discharge
+    address: 35209
+    divide: 1
+    data_type: uint32
+    input_type: input
+
+  - name: Battery soc
+    unique_id: soc
+    unit: '%'
+    address: 37007
+    data_type: uint16
+    input_type: input
+
+  - name: End
+    address: 37010
+    data_type: uint16
+    input_type: input
