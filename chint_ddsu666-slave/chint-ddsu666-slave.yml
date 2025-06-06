@@ -27,57 +27,79 @@ prcl: #protocol
     value: 230
     address: 5386
     data_type: float
+    input_type: holding
+    
   - name: Voltage_b
     unit: V
     value: 230
     address: 5388
     data_type: float
+    input_type: holding
+    
   - name: Voltage_c
     unit: V
     value: 230
     address: 5390
     data_type: float
+    input_type: holding
+    
   - name: Voltage_ab
     unit: V
     value: 398
     address: 5392
     data_type: float
+    input_type: holding
+    
   - name: Voltage_bc
     unit: V
     value: 398
     address: 5394
     data_type: float
+    input_type: holding
+    
   - name: Voltage_ca
     unit: V
     value: 398
     address: 5396
     data_type: float
+    input_type: holding
+    
 
   - name: Current_a
     unit: A
     value: P/690
     address: 5398
     data_type: float
+    input_type: holding
+    
   - name: Current_b
     unit: A
     value: P/690
     address: 5400
     data_type: float
+    input_type: holding
+    
   - name: Current_c
     unit: A
     value: P/690
     address: 5402
     data_type: float
+    input_type: holding
+    
 
   - name: Total Active power
     unit: W
     value: P
     address: 5404
     data_type: float
+    input_type: holding
+    
 
   - name: end 
     unit: VA
     value: 0
     address: 5486
     data_type: float
+    input_type: holding
+    
 

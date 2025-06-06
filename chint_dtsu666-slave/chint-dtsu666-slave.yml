@@ -27,23 +27,33 @@ prcl: #protocol
     value: 230
     address: 8192
     data_type: float
+    input_type: holding
+
   - name: Voltage
     unit: V
     value: 230
     address: 8194
     data_type: float
+    input_type: holding
+    
   - name: Current
     unit: A
     value: P/230
     address: 8196
     data_type: float
+    input_type: holding
+    
   - name: Active power
     unit: W
     value: P
     address: 8198
     data_type: float
+    input_type: holding
+    
   - name: Apparent power
     unit: VA
     value: P
     address: 8198
     data_type: float
+    input_type: holding
+    
