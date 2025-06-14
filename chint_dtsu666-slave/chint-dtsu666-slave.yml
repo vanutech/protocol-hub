@@ -28,6 +28,7 @@ prcl: #protocol
     address: 5386
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Voltage_b
     unit: V
@@ -35,6 +36,7 @@ prcl: #protocol
     address: 5388
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Voltage_c
     unit: V
@@ -42,6 +44,7 @@ prcl: #protocol
     address: 5390
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Voltage_ab
     unit: V
@@ -49,6 +52,7 @@ prcl: #protocol
     address: 5392
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Voltage_bc
     unit: V
@@ -56,6 +60,7 @@ prcl: #protocol
     address: 5394
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Voltage_ca
     unit: V
@@ -63,6 +68,7 @@ prcl: #protocol
     address: 5396
     data_type: float
     input_type: holding
+    endianness: big-endian
     
 
   - name: Current_a
@@ -71,6 +77,7 @@ prcl: #protocol
     address: 5398
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Current_b
     unit: A
@@ -78,6 +85,7 @@ prcl: #protocol
     address: 5400
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Current_c
     unit: A
@@ -85,6 +93,7 @@ prcl: #protocol
     address: 5402
     data_type: float
     input_type: holding
+    endianness: big-endian
     
 
   - name: Total Active power
@@ -93,6 +102,7 @@ prcl: #protocol
     address: 5404
     data_type: float
     input_type: holding
+    endianness: big-endian
     
 
   - name: end 
@@ -101,5 +111,6 @@ prcl: #protocol
     address: 5486
     data_type: float
     input_type: holding
+    endianness: big-endian
     
 

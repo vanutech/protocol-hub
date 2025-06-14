@@ -28,6 +28,7 @@ prcl: #protocol
     address: 8192
     data_type: float
     input_type: holding
+    endianness: big-endian
 
   - name: Voltage
     unit: V
@@ -35,6 +36,7 @@ prcl: #protocol
     address: 8194
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Current
     unit: A
@@ -42,6 +44,7 @@ prcl: #protocol
     address: 8196
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Active power
     unit: W
@@ -49,6 +52,7 @@ prcl: #protocol
     address: 8198
     data_type: float
     input_type: holding
+    endianness: big-endian
     
   - name: Apparent power
     unit: VA
@@ -56,4 +60,5 @@ prcl: #protocol
     address: 8198
     data_type: float
     input_type: holding
+    endianness: big-endian
     
