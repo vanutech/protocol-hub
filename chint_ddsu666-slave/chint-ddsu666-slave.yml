@@ -62,3 +62,9 @@ prcl: #protocol
     input_type: holding
     endianness: big-endian
     
+  - name: end 
+    unit: VA
+    value: 0
+    address: 8212
+    data_type: uint16
+    input_type: holding
