@@ -33,7 +33,7 @@ prcl: #protocol
     
   - name: Current
     unit: A
-    value: P/230
+    value: I
     address: 8194
     data_type: float
     input_type: holding
@@ -56,7 +56,7 @@ prcl: #protocol
     endianness: big-endian
 
   - name: power factor
-    value: 50
+    value: 1
     address: 8202
     data_type: float
     input_type: holding
