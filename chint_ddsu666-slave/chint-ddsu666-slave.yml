@@ -30,18 +30,11 @@ prcl: #protocol
     input_type: holding
     endianness: big-endian
 
-  - name: Voltage
-    unit: V
-    value: 230
-    address: 8194
-    data_type: float
-    input_type: holding
-    endianness: big-endian
     
   - name: Current
     unit: A
     value: P/230
-    address: 8196
+    address: 8194
     data_type: float
     input_type: holding
     endianness: big-endian
@@ -49,7 +42,7 @@ prcl: #protocol
   - name: Active power
     unit: W
     value: P
-    address: 8198
+    address: 8196
     data_type: float
     input_type: holding
     endianness: big-endian
@@ -57,11 +50,25 @@ prcl: #protocol
   - name: Apparent power
     unit: VA
     value: P
-    address: 8198
+    address: 8200
     data_type: float
     input_type: holding
     endianness: big-endian
-    
+
+  - name: power factor
+    value: 50
+    address: 8202
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - name: Frequency
+    value: 50
+    address: 8206
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
   - name: end 
     unit: VA
     value: 0
