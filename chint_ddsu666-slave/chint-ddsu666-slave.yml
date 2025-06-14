@@ -24,7 +24,7 @@ adr: !parameter
 prcl: #protocol
   - name: Voltage
     unit: V
-    value: 230
+    value: U
     address: 8192
     data_type: float
     input_type: holding
@@ -49,21 +49,21 @@ prcl: #protocol
     
   - name: Apparent power
     unit: VA
-    value: P
+    value: S
     address: 8200
     data_type: float
     input_type: holding
     endianness: big-endian
 
   - name: power factor
-    value: 1
+    value: PF
     address: 8202
     data_type: float
     input_type: holding
     endianness: big-endian   
 
   - name: Frequency
-    value: 50
+    value: F
     address: 8206
     data_type: float
     input_type: holding
