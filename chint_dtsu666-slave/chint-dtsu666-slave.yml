@@ -73,7 +73,7 @@ prcl: #protocol
 
   - name: Current_a
     unit: A
-    value: P/690
+    value: I1
     address: 5398
     data_type: float
     input_type: holding
@@ -81,7 +81,7 @@ prcl: #protocol
     
   - name: Current_b
     unit: A
-    value: P/690
+    value: I2
     address: 5400
     data_type: float
     input_type: holding
@@ -89,7 +89,7 @@ prcl: #protocol
     
   - name: Current_c
     unit: A
-    value: P/690
+    value: I3
     address: 5402
     data_type: float
     input_type: holding
@@ -103,7 +103,61 @@ prcl: #protocol
     data_type: float
     input_type: holding
     endianness: big-endian
+  - name: power fase 1
+    unit: W
+    value: P
+    address: 5406
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+  - name: Total apparent power
+    unit: W
+    value: P
+    address: 5420
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+  - name: apparentpower fase 1
+    unit: W
+    value: P
+    address: 5422
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+
     
+
+  - name: power factor
+    value: 1
+    address: 5428
+    data_type: float
+    input_type: holding
+    endianness: big-endian     
+  - name: power factor
+    value: PF1
+    address: 5430
+    data_type: float
+    input_type: holding
+    endianness: big-endian     
+  - name: power factor
+    value: PF2
+    address: 5432
+    data_type: float
+    input_type: holding
+    endianness: big-endian    
+  - name: power factor
+    value: PF3
+    address: 5434
+    data_type: float
+    input_type: holding
+    endianness: big-endian    
+
+  - name: Frequency
+    value: F
+    address: 5454
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
 
   - name: end 
     unit: VA
