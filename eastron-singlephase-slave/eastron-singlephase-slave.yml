@@ -24,15 +24,15 @@ adr: !parameter
 prcl: #protocol
   - name: Voltage
     unit: V
-    value: 230
+    value: U
     address: 1
     data_type: float
-    input_type: holding
+    input_type: input
 
   - name: Current
     unit: A
-    value: P/230
-    address: 300007
+    value: I
+    address: 7
     data_type: float
 
   - name: Active power
