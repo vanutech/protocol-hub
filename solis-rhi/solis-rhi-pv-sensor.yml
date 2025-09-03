@@ -29,7 +29,7 @@ prcl: #protocol
   - name: Total DC outputpower
     unique_id: Power
     address: 33057
-    data_type: unt32
+    data_type: uint32
     input_type: input
 
   - name: End
