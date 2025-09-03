@@ -1,0 +1,57 @@
+# Zato Sungrow inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: ValuePower
+# possible types ?
+
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+# register mentioned in changelog but not documented 
+# BIT00 : Reserved 
+# BIT01 : Reserved 
+# BIT02 : CT in grid, AC couple inverter only, to avoid uploading meter COM fail alarm 
+# BIT03 : Parallel inverter CT detection switch –   if 33250 BIT03=0 a,d 33245>500W it means there is CT connected for several inverters and power flow exists. If 33250=0, 33245 value needs to be displayed. 
+# BIT04 : Enable EPM (1=ON) 
+# BIT05 : Enable EPM FailSafe (1=ON) 
+# BIT06 : Power control mode – 0 : 3 phase balanced – 1 : 3 phase individual control, effective when EPM function (BIT04 or BIT07) enabled 
+# BIT07 : EPM current setting swich, 0=OFF, 1=ON. When ON, set 43326 or 43327-43329 according to mode corresponding to BIT06 (Note 
+#            : temporarily supported from S6 models) 
+# BIT08 : External EPM : 1=ON 0=OFF Not supported to have BIT04 and BIT08 at the same time. (only used for 3ph HV hybrid 5G) 
+# BIT09 : External EPM Failsafe (1=ON) (only used for 3ph HV hybrid 5G) 
+# BIT10 : Parallel EPM power setting switch (1=ON) 
+# BIT11 : Parallel EPM current setting switch 1=ON default OFF 
+# BIT12 : sdf
+# Parallel power control mode (when BIT10 or BIT11 is ON)  0 three phase balanced 1  Three phase independent BIT13- Reserved	sdf
+
+prcl: #protocol
+
+
+
+
+  - value: 0bxxxx1xxxxxxxxxxx
+    address: 43073 
+    input_type: holding
+    data_type: uint16
+
+  - name: EPM Export Power Limit
+    value: ValuePower
+    address: 43074 
+    input_type: holding
+    data_type: uint16
+    scale: 100
+
+    
