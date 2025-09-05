@@ -14,7 +14,7 @@ pa: N
 
 #device specifics
 adr: !parameter
-type: battery
+type: pv
 
 prcl: #protocol
 

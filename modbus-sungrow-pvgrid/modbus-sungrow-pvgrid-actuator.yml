@@ -24,7 +24,7 @@ prcl: #protocol
     input_type: holding
     data_type: uint16
 
-  - value: ValuePower
+  - value: PowerLimit
     address: 5039 
     input_type: holding
     data_type: uint16
