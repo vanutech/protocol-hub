@@ -1,0 +1,64 @@
+# Zato chint single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2025-09-13
+#
+# Note: 
+
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+
+
+prcl: #protocol
+  - unique_id: Voltage
+    address: 8192
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+
+  - unique_id: Current
+    address: 8194
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+  - unique_id: Power
+    address: 8196
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+
+  - unique_id: PF
+    address: 8202
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: Frequency
+    address: 8206
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: Energy_inport
+    address: 16384
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: Energy_export
+    address: 16386
+    data_type: float
+    input_type: holding
+    endianness: big-endian  

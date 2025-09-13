@@ -1,0 +1,62 @@
+# Zato Acrel single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+prcl: #protocol
+
+  - unique_id: Voltage
+    address: 11
+    data_type: uint16
+    divide: 10
+    input_type: holding
+
+  - unique_id: Current
+    address: 12
+    data_type: uint16
+    divide: 100
+    input_type: holding
+
+  - unique_id: Power
+    address: 13
+    data_type: uint16
+    divide: 1
+    input_type: holding
+
+  - unique_id: PF
+    address: 16
+    data_type: uint16
+    divide: 100
+    input_type: holding
+
+  - unique_id: Frequency
+    address: 17
+    data_type: uint16
+    divide: 100
+    input_type: holding
+
+  - unique_id: Energy_inport
+    address: 104
+    data_type: uint32
+    divide: 100
+    input_type: holding
+
+  - unique_id: Energy_export
+    address: 114
+    data_type: uint32
+    divide: 100
+    input_type: holding
