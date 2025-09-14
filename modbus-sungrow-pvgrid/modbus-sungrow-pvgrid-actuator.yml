@@ -9,8 +9,7 @@
 pri: actuator
 
 type: ValuePower
-# possible typs
-# mainmeter, pv, battery, usage, charger
+subtype: PowerLimit # type to know what power control is done power limit or export power
 
 host: !parameter
 adr: !parameter
@@ -24,7 +23,7 @@ prcl: #protocol
     input_type: holding
     data_type: uint16
 
-  - value: PowerLimit
+  - value: ValuePower
     address: 5039 
     input_type: holding
     data_type: uint16

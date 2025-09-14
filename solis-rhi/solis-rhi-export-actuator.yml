@@ -9,6 +9,8 @@
 pri: actuator
 
 type: ValuePower
+subtype: ExportLimit # type to know what power control is done power limit or export power
+
 # possible types ?
 
 
@@ -48,7 +50,7 @@ prcl: #protocol
     data_type: uint16
 
   - name: EPM Export Power Limit
-    value: ExportLimit
+    value: ValuePower
     address: 43074 
     input_type: holding
     data_type: uint16
