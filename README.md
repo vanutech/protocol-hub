@@ -41,8 +41,7 @@ actuator types
 - proportional switch  (ProportionalSwitch , SW)
 - value power (ValuePower ; VP) 
 - Sync meter values (SyncMeter; SM)
-- export limit of grid (ExportLimit ; EL)
-- power limit of inverter (PowerLimit ; PL)
+- power limit of inverter (PowerLimit ; PL), subtype exportlimit, InverterLimit
 
 
 sensor type

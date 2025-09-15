@@ -9,6 +9,7 @@
 pri: actuator
 
 type: PowerLimit
+subtype: InverterLimit
 
 host: !parameter
 adr: !parameter

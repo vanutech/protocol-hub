@@ -8,7 +8,8 @@
 
 pri: actuator
 
-type: ExportLimit
+type: PowerLimit
+subtype: ExportLimit
 
 # possible types ?
 
