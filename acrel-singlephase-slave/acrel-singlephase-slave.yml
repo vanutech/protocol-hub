@@ -5,11 +5,12 @@
 #
 # Note: 
 
-type: ValuePower
+type: SyncMeter
 # possible typs
 # SW, //switch or relay on off
 # PS, //proportional switch
 # VP, //valut of power
+# SM, //sync meter
 
 
 pri: actuator

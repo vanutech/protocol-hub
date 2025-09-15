@@ -8,8 +8,7 @@
 
 pri: actuator
 
-type: ValuePower
-subtype: ExportLimit # type to know what power control is done power limit or export power
+type: ExportLimit
 
 # possible types ?
 
@@ -41,16 +40,15 @@ adr: !parameter
 
 prcl: #protocol
 
-
-
-
-  - value: 0bxxxx1xxxxxxxxxxx
+  - value: Enable
+    value-on: bxxxx1xxxxxxxxxxx
+    value-off: bxxxx0xxxxxxxxxxx
     address: 43073 
     input_type: holding
-    data_type: uint16
+    data_type: bool
 
   - name: EPM Export Power Limit
-    value: ValuePower
+    value: Power
     address: 43074 
     input_type: holding
     data_type: uint16

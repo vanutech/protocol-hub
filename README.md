@@ -32,3 +32,24 @@ prcl: #protocol
     data_type: uint16
     scale: 0.1
 
+
+
+## types
+
+actuator types
+- switch (Switch ; SW)
+- proportional switch  (ProportionalSwitch , SW)
+- value power (ValuePower ; VP) 
+- Sync meter values (SyncMeter; SM)
+- export limit of grid (ExportLimit ; EL)
+- power limit of inverter (PowerLimit ; PL)
+
+
+sensor type
+- sensor to get all meter values (mainmeter)
+- sensor to get all gas values (gasmeter)
+- pv production sensor (pv)
+- battery info sensor (battery)
+- usage power sensor (usage)
+- ev charger sensor (charger)
+
