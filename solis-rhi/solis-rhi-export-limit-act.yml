@@ -42,8 +42,8 @@ adr: !parameter
 prcl: #protocol
 
   - value: Enable
-    value-on: bxxxx1xxxxxxxxxxx
-    value-off: bxxxx0xxxxxxxxxxx
+    value-on: 0b000010000000000
+    value-off: 0b0000000000000000
     address: 43073 
     input_type: holding
     data_type: bool
