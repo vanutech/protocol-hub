@@ -1,0 +1,102 @@
+# solis rai monitor rai single phase battery inverter
+# 
+# by Wouter vanoverberghe
+# last update: 2024-11-01
+#
+# Note: 
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+prcl: #protocol
+
+  - unique_id: Voltage_1
+    address: 33251
+    data_type: uint16
+    scale: 0.1
+    input_type: input
+  - unique_id: Current_1
+    address: 33252
+    data_type: uint16
+    scale: 0.01
+    input_type: input
+    
+  - unique_id: Voltage_2
+    address: 33253
+    data_type: uint16
+    scale: 0.1
+    input_type: input
+  - unique_id: Current_2
+    address: 33254
+    data_type: uint16
+    scale: 0.01
+    input_type: input
+    
+  - unique_id: Voltage_3
+    address: 33255
+    data_type: uint16
+    scale: 0.1
+    input_type: input
+  - unique_id: Current_3
+    address: 33256
+    data_type: uint16
+    scale: 0.01
+    input_type: input
+
+
+  - unique_id: Power_1
+    address: 33257
+    data_type: int32
+    input_type: input
+
+  - unique_id: Power_2
+    address: 33259
+    data_type: int32
+    input_type: input
+
+  - unique_id: Power_3
+    address: 33261
+    data_type: int32
+    input_type: input
+
+  - name: Active power
+    unique_id: Power
+    address: 33263
+    data_type: int32
+    input_type: input
+
+
+  - unique_id: Frequency
+    address: 33282
+    data_type: uint16
+    scale: 0.01
+    input_type: input
+
+  - unique_id: energy_import
+    address: 33283
+    data_type: uint32
+    scale: 0.01
+    input_type: input
+
+  - unique_id: energy_export
+    address: 33285
+    data_type: uint32
+    scale: 0.01
+    input_type: input
+
+
+
+
+  - name: End
+    address: 33288
+    data_type: uint16
+    input_type: input
+
