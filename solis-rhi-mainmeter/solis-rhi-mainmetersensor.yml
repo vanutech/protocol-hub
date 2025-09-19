@@ -26,7 +26,7 @@ prcl: #protocol
   - unique_id: Current_1
     address: 33252
     data_type: uint16
-    scale: 0.01
+    scale: -0.01
     input_type: input
     
   - unique_id: Voltage_2
@@ -37,7 +37,7 @@ prcl: #protocol
   - unique_id: Current_2
     address: 33254
     data_type: uint16
-    scale: 0.01
+    scale: -0.01
     input_type: input
     
   - unique_id: Voltage_3
@@ -48,29 +48,33 @@ prcl: #protocol
   - unique_id: Current_3
     address: 33256
     data_type: uint16
-    scale: 0.01
+    scale: -0.01
     input_type: input
 
 
   - unique_id: Power_1
     address: 33257
     data_type: int32
+    scale: -1
     input_type: input
 
   - unique_id: Power_2
     address: 33259
     data_type: int32
+    scale: -1
     input_type: input
 
   - unique_id: Power_3
     address: 33261
     data_type: int32
+    scale: -1
     input_type: input
 
   - name: Active power
     unique_id: Power
     address: 33263
     data_type: int32
+    scale: -1
     input_type: input
 
 
