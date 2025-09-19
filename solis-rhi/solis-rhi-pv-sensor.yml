@@ -1,0 +1,38 @@
+# solis rai monitor rai single phase battery inverter
+# 
+# by Wouter vanoverberghe
+# last update: 2024-11-01
+#
+# Note: 
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: pv
+
+prcl: #protocol
+
+
+  - name: Total battery charge
+    unit: kWh
+    unique_id: Energy
+    address: 33029
+    data_type: uint32
+    input_type: input
+
+  - name: Total DC outputpower
+    unique_id: Power
+    address: 33057
+    data_type: uint32
+    input_type: input
+
+  - name: End
+    address: 33040
+    data_type: uint16
+    input_type: input
