@@ -23,6 +23,15 @@ prcl: #protocol
     data_type: int32
     input_type: input
 
+  #always put sign after power
+  - unique_id: SignPower
+    value-on: 1
+    value-off: 0
+    address: 33135
+    data_type: bool
+    input_type: input
+
+
   - name: Battery soc
     unique_id: soc
     unit: '%'
