@@ -8,8 +8,8 @@
 
 pri: actuator
 
-type: PowerLimitBand
-subtype: BatterytLimit
+type: PowerLimitBidir
+subtype: BatteryLimit
 
 # possible types ?
 

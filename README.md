@@ -42,7 +42,7 @@ actuator types
 - Set power (SetPower ; SP) 
 - Sync meter values (SyncMeter; SM)
 - power limit of inverter (PowerLimit ; PL), subtype exportlimit, InverterLimit
-- power limits of battery, ... (PowerLimitBand ; PLB), subtype battery limit
+- power limits of for bi directional devices (battery), ... (PowerLimitBidir ; PLB), subtype battery limit
 
 
 sensor type
