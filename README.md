@@ -39,9 +39,10 @@ prcl: #protocol
 actuator types
 - switch (Switch ; SW)
 - proportional switch  (ProportionalSwitch , SW)
-- value power (ValuePower ; VP) 
+- Set power (SetPower ; SP) 
 - Sync meter values (SyncMeter; SM)
 - power limit of inverter (PowerLimit ; PL), subtype exportlimit, InverterLimit
+- power limits of battery, ... (PowerLimitBand ; PLB), subtype battery limit
 
 
 sensor type
@@ -51,4 +52,6 @@ sensor type
 - battery info sensor (battery)
 - usage power sensor (usage)
 - ev charger sensor (charger)
+
+
 

@@ -1,0 +1,51 @@
+# Zato Sungrow inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: SetPower
+subtype: BatterytLimit
+
+# possible types ?
+
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+
+prcl: #protocol
+
+  - value: Enable
+    value-on: 1
+    value-off: 0
+    address: 43114 
+    input_type: holding
+    data_type: bool
+
+  - name: Battery charge and discharge current setting
+    value: Current
+    address: 43116
+    input_type: holding
+    data_type: uint16
+    divide: 10
+
+  #always put sign after power
+  
+  - name: Battery charge and discharge current setting
+    unique_id: SignPower
+    value-on: 1
+    value-off: 0
+    address: 43115
+    data_type: bool
+    input_type: input
+

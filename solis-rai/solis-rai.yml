@@ -31,6 +31,13 @@ prcl: #protocol
     data_type: bool
     input_type: input
 
+  - name: Battery voltage
+    unique_id: Bat_voltage
+    unit: '%'
+    address: 33133
+    data_type: uint16
+    input_type: input
+    divide: 10
 
   - name: Battery soc
     unique_id: soc
