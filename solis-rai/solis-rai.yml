@@ -32,7 +32,7 @@ prcl: #protocol
     input_type: input
 
   - name: Battery voltage
-    unique_id: Bat_voltage
+    unique_id: Voltage
     unit: '%'
     address: 33133
     data_type: uint16
