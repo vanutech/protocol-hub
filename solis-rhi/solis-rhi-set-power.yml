@@ -11,7 +11,8 @@ pri: actuator
 type: SetPower
 subtype: BatterytLimit
 
-linkedsensor: solis-rhi-battery-sensor
+# link to sensor
+linkse: solis-rhi-battery-sensor
 
 #connection specifics (modbus)
 Bd: 9600
