@@ -28,26 +28,26 @@ prcl: #protocol
   - value: ChargeEnable
     value-on: 1
     value-off: 0
-    address: 43708 
+    address: 43707 
     input_type: holding
     data_type: bool
 
   - name: maximum percentage to 100
     value: 100
-    address: 43709
+    address: 43708
     input_type: holding
     data_type: uint16
 
   - name: Battery charge current maximum setting 
     value: ChargeCurrent
-    address: 43710 
+    address: 43709
     input_type: holding
     data_type: uint16
     divide: 10
 
   - name: set timing for complete day
     value: 0x0000000000170038
-    address: 43712
+    address: 43711
     input_type: holding
     data_type: uint64
 
@@ -56,26 +56,26 @@ prcl: #protocol
   - value: DisChargeEnable
     value-on: 1
     value-off: 0
-    address: 43750 
+    address: 43749 
     input_type: holding
     data_type: bool
 
   - name: minimum percentage to 15
     value: 15
-    address: 43751
+    address: 43750
     input_type: holding
     data_type: uint16
 
   - name: Battery charge current maximum setting 
     value: DischargeCurrent
-    address: 43752 
+    address: 43751
     input_type: holding
     data_type: uint16
     divide: 10
 
   - name: set timing for complete day
     value: 0x0000000000170038
-    address: 43754
+    address: 43753
     input_type: holding
     data_type: uint64
 
