@@ -40,6 +40,14 @@ prcl: #protocol
     data_type: bool
     input_type: input
 
+  - name: Battery voltage
+    unique_id: Voltage
+    unit: '%'
+    address: 33133
+    data_type: uint16
+    input_type: input
+    divide: 10
+
   - name: Total battery charge
     unit: kWh
     unique_id: Energy_charge
