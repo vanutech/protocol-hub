@@ -60,8 +60,8 @@ prcl: #protocol
     input_type: holding
     data_type: bool
 
-  - name: minimum percentage to 15
-    value: 15
+  - name: minimum percentage to 21
+    value: 21  #this is the minim discharge level
     address: 43750
     input_type: holding
     data_type: uint16
