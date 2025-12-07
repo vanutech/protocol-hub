@@ -25,7 +25,7 @@ adr: !parameter
 
 prcl: #protocol
 
-  - value: Enable
+  - value: ChargeEnable
     value-on: 1
     value-off: 0
     address: 43708 
@@ -53,7 +53,7 @@ prcl: #protocol
 
 
 
-  - value: Enable
+  - value: DisChargeEnable
     value-on: 1
     value-off: 0
     address: 43750 
