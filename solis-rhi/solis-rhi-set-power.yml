@@ -25,12 +25,6 @@ adr: !parameter
 
 prcl: #protocol
 
-  - value: ChargeEnable
-    value-on: 1
-    value-off: 0
-    address: 43707 
-    input_type: holding
-    data_type: bool
 
   - name: maximum percentage to 100
     value: 100
@@ -45,20 +39,14 @@ prcl: #protocol
     data_type: uint16
     divide: 10
 
-  - name: set timing for complete day
-    value: 0x0000000000170038
+  - value: ChargeEnable
+    value-on: 0x0000000000170038
+    value-off: 0x0
     address: 43711
     input_type: holding
     data_type: uint64
 
 
-
-  - value: DisChargeEnable
-    value-on: 1
-    value-off: 0
-    address: 43749 
-    input_type: holding
-    data_type: bool
 
   - name: minimum percentage to 21
     value: 21  #this is the minim discharge level
@@ -73,8 +61,9 @@ prcl: #protocol
     data_type: uint16
     divide: 10
 
-  - name: set timing for complete day
-    value: 0x0000000000170038
+  - value: DisChargeEnable
+    value-on: 0x0000000000170038
+    value-off: 0x0
     address: 43753
     input_type: holding
     data_type: uint64
