@@ -42,7 +42,7 @@ prcl: #protocol
   - value: ChargeEnable
     value-on: 0x00170038
     value-off: 0x0
-    address: 43712
+    address: 43713
     input_type: holding
     data_type: booluint32
 
