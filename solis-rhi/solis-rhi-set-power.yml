@@ -40,11 +40,11 @@ prcl: #protocol
     divide: 10
 
   - value: ChargeEnable
-    value-on: 0x0000000000170038
+    value-on: 0x00170038
     value-off: 0x0
-    address: 43711
+    address: 43712
     input_type: holding
-    data_type: uint64
+    data_type: booluint32
 
 
 
@@ -62,9 +62,9 @@ prcl: #protocol
     divide: 10
 
   - value: DisChargeEnable
-    value-on: 0x0000000000170038
+    value-on: 0x00170038
     value-off: 0x0
-    address: 43753
+    address: 43755
     input_type: holding
-    data_type: uint64
+    data_type: booluint32
 
