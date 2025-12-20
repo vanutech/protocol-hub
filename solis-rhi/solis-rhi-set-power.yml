@@ -1,0 +1,70 @@
+# Zato solis inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: SetPower
+subtype: BatterytLimit
+
+# link to sensor
+linkse: solis-rhi-battery-sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+
+prcl: #protocol
+
+
+  - name: maximum percentage to 100
+    value: 100
+    address: 43708
+    input_type: holding
+    data_type: uint16
+
+  - name: Battery charge current maximum setting 
+    value: ChargeCurrent
+    address: 43709
+    input_type: holding
+    data_type: uint16
+    divide: 10
+
+  - value: ChargeEnable
+    value-on: 0x00170038
+    value-off: 0x0
+    address: 43713
+    input_type: holding
+    data_type: booluint32
+
+
+
+  - name: minimum percentage to 21
+    value: 21  #this is the minim discharge level
+    address: 43750
+    input_type: holding
+    data_type: uint16
+
+  - name: Battery charge current maximum setting 
+    value: DischargeCurrent
+    address: 43751
+    input_type: holding
+    data_type: uint16
+    divide: 10
+
+  - value: DisChargeEnable
+    value-on: 0x00170038
+    value-off: 0x0
+    address: 43755
+    input_type: holding
+    data_type: booluint32
+
