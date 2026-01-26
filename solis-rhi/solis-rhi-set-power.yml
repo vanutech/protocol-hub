@@ -40,7 +40,7 @@ prcl: #protocol
     divide: 10
 
   - value: ChargeEnable
-    value-on: 0x00170038
+    value-on: 0x0017003B
     value-off: 0x0
     address: 43713
     input_type: holding
@@ -62,7 +62,7 @@ prcl: #protocol
     divide: 10
 
   - value: DisChargeEnable
-    value-on: 0x00170038
+    value-on: 0x0017003B
     value-off: 0x0
     address: 43755
     input_type: holding

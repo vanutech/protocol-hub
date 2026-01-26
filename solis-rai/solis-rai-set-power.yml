@@ -26,45 +26,34 @@ adr: !parameter
 prcl: #protocol
 
 
-  - name: maximum percentage to 100
-    value: 100
-    address: 43708
-    input_type: holding
-    data_type: uint16
 
   - name: Battery charge current maximum setting 
     value: ChargeCurrent
-    address: 43709
+    address: 43141
     input_type: holding
     data_type: uint16
     divide: 10
 
   - value: ChargeEnable
-    value-on: 0x00170038
+    value-on: 0x0017003B
     value-off: 0x0
-    address: 43713
+    address: 43143
     input_type: holding
     data_type: booluint32
 
 
 
-  - name: minimum percentage to 21
-    value: 21  #this is the minim discharge level
-    address: 43750
-    input_type: holding
-    data_type: uint16
-
   - name: Battery charge current maximum setting 
     value: DischargeCurrent
-    address: 43751
+    address: 43742
     input_type: holding
     data_type: uint16
     divide: 10
 
   - value: DisChargeEnable
-    value-on: 0x00170038
+    value-on: 0x0017003B
     value-off: 0x0
-    address: 43755
+    address: 43745
     input_type: holding
     data_type: booluint32
 
