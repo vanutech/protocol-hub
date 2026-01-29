@@ -37,7 +37,7 @@ prcl: #protocol
   - value: ChargeEnable
     value-on: 0x0017003B
     value-off: 0x0
-    address: 43143
+    address: 43145
     input_type: holding
     data_type: booluint32
 
@@ -53,7 +53,7 @@ prcl: #protocol
   - value: DisChargeEnable
     value-on: 0x0017003B
     value-off: 0x0
-    address: 43145
+    address: 43149
     input_type: holding
     data_type: booluint32
 
