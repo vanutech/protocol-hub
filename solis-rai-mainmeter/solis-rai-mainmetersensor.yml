@@ -30,13 +30,6 @@ prcl: #protocol
     input_type: input
 
 
-
-  - unique_id: Power_1
-    address: 33257
-    data_type: int32
-    scale: -1
-    input_type: input
-
   - name: Active power
     unique_id: Power
     address: 33257
