@@ -13,6 +13,13 @@ adr: !parameter
 type: battery
 
 prcl: #protocol
+
+  # - name: Active power
+  #   unique_id: Power
+  #   address: 30001
+  #   data_type: int16
+  #   input_type: holding
+
   - name: Battery voltage
     unique_id: Voltage
     unit: '%'
@@ -20,12 +27,6 @@ prcl: #protocol
     data_type: uint16
     input_type: holding
     divide: 100
-
-  - name: Active power
-    unique_id: Power
-    address: 34001
-    data_type: int16
-    input_type: holding
 
   - name: Battery soc
     unique_id: soc
