@@ -1,0 +1,43 @@
+# Zato solis rai inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: SetPower
+subtype: BatterytLimit
+
+# link to sensor
+linkse: maerstek-venus-sensor
+
+
+#device specifics
+adr: !parameter
+
+
+prcl: #protocol
+
+
+  - value: Enable
+    value-on: 16   # 10064 value 3 (third_party_control) <- 0x8006 BIT5
+    value-off: 0   # 10064 value 0 (self_consumption) <- 0x8006 BIT0 
+    address: 10064
+    input_type: holding
+    data_type: bool
+
+
+  - name: battery_power_setpoint
+    value: Power
+    address: 10071
+    input_type: holding
+    data_type: INT32
+
+  - name: battery_power_direction
+    value: Power
+    address: 10071
+    input_type: holding
+    data_type: INT32
