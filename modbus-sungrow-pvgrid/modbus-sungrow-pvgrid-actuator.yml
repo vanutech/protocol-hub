@@ -10,6 +10,7 @@ pri: actuator
 
 type: PowerLimit
 subtype: InverterLimit
+linkse: modbus-sungrow-pvgrid
 
 host: !parameter
 adr: !parameter
