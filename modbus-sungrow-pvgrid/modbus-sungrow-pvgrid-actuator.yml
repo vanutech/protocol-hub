@@ -19,14 +19,14 @@ port: 502
 prcl: #protocol
 
 
-  - unique_id: enable
+  - value: enable
     value-on: 0xAA
     value-off: 0x55
     address: 5007 
     input_type: holding
     data_type: bool
 
-  - unique_id: Power
+  - value: Power
     address: 5039 
     input_type: holding
     data_type: uint16
