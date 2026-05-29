@@ -26,7 +26,7 @@ prcl: #protocol
     address: 5000  # reg 5001
     data_type: uint16
     input_type: input
-    scale: 0.1
+    scale: 100 # 0,1 to kW 1000 to W
     
   - name: Daily PV generation & battery discharge
     unique_id: Reserve1
