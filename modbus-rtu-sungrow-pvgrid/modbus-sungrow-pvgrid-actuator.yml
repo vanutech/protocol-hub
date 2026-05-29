@@ -27,12 +27,12 @@ prcl: #protocol
   - value: enable
     value-on: 0xAA
     value-off: 0x55
-    address: 5007 
+    address: 5006
     input_type: holding
     data_type: bool
 
-  - value: Power
-    address: 5039 
+  - value: PowerPercentage
+    address: 5007
     input_type: holding
     data_type: uint16
     scale: 0.1

@@ -21,6 +21,13 @@ type: pv
 
 prcl: #protocol
 
+  - name: Nominal active power
+    unique_id: NominalPower
+    address: 5000  # reg 5001
+    data_type: uint16
+    input_type: input
+    scale: 0.1
+    
   - name: Daily PV generation & battery discharge
     unique_id: Reserve1
     address: 5002 # reg 5003
