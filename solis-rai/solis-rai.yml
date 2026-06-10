@@ -17,28 +17,38 @@ adr: !parameter
 type: battery
 
 prcl: #protocol
-  - name: Active power
-    unique_id: Power
-    address: 33079
-    data_type: int32
-    input_type: input
 
-  #always put sign after power
-  - unique_id: SignPower
-    value-on: 1
-    value-off: 0
-    address: 33135
-    data_type: bool
-    input_type: input
+  # - name: Active power
+  #   unique_id: Power
+  #   address: 33079
+  #   data_type: int32
+  #   input_type: input
+
+  # #always put sign after power
+  # - unique_id: SignPower
+  #   value-on: 1
+  #   value-off: 0
+  #   address: 33135
+  #   data_type: bool
+  #   input_type: input
+
 
   - name: Battery voltage
     unique_id: Voltage
-    unit: '%'
     address: 33133
     data_type: uint16
     input_type: input
     divide: 10
 
+    #always put current after voltage voltage is used to mulitply
+    #need to use current because this creates same as setpoint
+  - name: Battery current
+    unique_id: Current
+    address: 33134
+    data_type: int16
+    input_type: input
+    divide: -10
+    
   - name: Battery soc
     unique_id: soc
     unit: '%'
