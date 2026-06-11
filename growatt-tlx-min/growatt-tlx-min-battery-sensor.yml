@@ -32,30 +32,24 @@ prcl: #protocol
     divide: 10
     input_type: input
 
-  - name: Battery soc
+  - name: Battery soc %
     unique_id: soc
-    unit: '%'
     address: 1014
     data_type: uint16
     input_type: input
 
-  - name: Total battery discharge
-    unit: kWh
+  - name: Total battery discharge kWh
     unique_id: Energy_discharge
     address: 1054
     divide: 10
     data_type: uint32
     input_type: input
 
-  - name: Total battery charge
-    unit: kWh
+  - name: Total battery charge kWh
     unique_id: Energy_charge
     address: 1058
-    divide: 10
     data_type: uint32
+    divide: 10
     input_type: input
 
-  - name: End
-    address: 1062
-    data_type: uint16
-    input_type: input
+

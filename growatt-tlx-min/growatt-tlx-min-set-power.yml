@@ -85,5 +85,5 @@ prcl: #protocol
     value: 1
     address: 3049
     input_type: holding
-    data_type: bool
+    data_type: uint16
 
