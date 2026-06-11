@@ -1,0 +1,39 @@
+# Zato Solis inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: PowerLimit
+subtype: ExportLimit
+linkse: growatt-tlx-min-pv-sensor
+
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+prcl: #protocol
+
+  - value: Enable
+    value-on: 1
+    value-off: 0
+    address: 122 
+    input_type: holding
+    data_type: bool
+
+  - value: PowerPercentage
+    address: 123 
+    input_type: holding
+    data_type: int16
+    scale: 0.1
+
+    

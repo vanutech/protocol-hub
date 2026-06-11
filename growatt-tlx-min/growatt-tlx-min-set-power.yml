@@ -1,0 +1,89 @@
+# Zato solis inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: actuator
+
+type: SetPower
+subtype: BatterytLimit
+
+# link to sensor
+linkse: growatt-tlx-min-battery-sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+
+
+prcl: #protocol
+
+# Bit0~7: minutes;
+# Bit8~12: hour;
+# Bit13~14,
+# 0: load priority;
+# 1: battery priority;
+# 2: Grid priority;
+# Bit15,
+# 0: prohibited; 1:
+# enabled;
+# 3039 R/W Bit0~7: minutes;
+# Bit8~12: hour;
+# Bit13~15: reserved
+# charge enable
+# 00000000 00000 01 1  00111011 11000 000
+# discharge enable
+# 00000000 00000 11 1  00111011 11000 000
+
+  - value: DisChargeEnable
+    value-on: 0b00000000000001110011101111000000
+    value-off: 0b0
+    address: 3038
+    input_type: holding
+    data_type: booluint32
+
+  - name: Discharge Power Rate when Grid First
+    value: DischargePercentage
+    address: 3036
+    input_type: holding
+    data_type: uint16
+
+  - name: Stop Discharge soc when grid first
+    value: 10
+    address: 3037
+    input_type: holding
+    data_type: uint16
+
+
+  - value: ChargeEnable
+    value-on: 0b00000000000000110011101111000000
+    value-off: 0b0
+    address: 3038
+    input_type: holding
+    data_type: booluint32
+
+  - name: Battery charge power rate
+    value: ChargePercentage
+    address: 3047
+    input_type: holding
+    data_type: uint16
+
+  - name: Stop Charge soc when Bat First
+    value: 100
+    address: 3048
+    input_type: holding
+    data_type: uint16
+
+  - name: AcChargeEnable
+    value: 1
+    address: 3049
+    input_type: holding
+    data_type: bool
+
