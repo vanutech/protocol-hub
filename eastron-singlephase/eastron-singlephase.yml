@@ -5,69 +5,81 @@
 #
 # Note: 
 
+
 pri: sensor
-modbus:
-  - name: Eastron Single Phase
-    type: rtu
-    sensors:
-      - name: Line to neutral volts
-        unit: V
-        address: 0
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Current
-        unit: A
-        address: 6
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Active power
-        unit: W
-        address: 12
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Apparent power
-        unit: VA
-        address: 18
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Reactive power
-        unit: VAr
-        address: 24
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Power factor
-        unit: ''
-        address: 30
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-        datacollectolocation: 1986342194
-      - name: Phase angle
-        unit: "°"
-        address: 36
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Frequency
-        unit: Hz
-        address: 70
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Import active energy
-        unit: kwh
-        address: 72
-        reg_size: 2
-        data_type: 3
-        data_size: 4
-      - name: Import active energ
-        unit: kwh
-        address: 70
-        reg_size: 4
-        data_type: 3
-        data_size: 4
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+prcl: #protocol
+
+
+  - unique_id: Voltage
+    unit: V
+    value: U
+    address: 1
+    data_type: float
+    input_type: input
+
+  - unique_id: Current
+    unit: A
+    value: I
+    address: 7
+    data_type: float
+    input_type: input
+
+  - unique_id: Active power
+    unit: W
+    value: P
+    address: 12
+    data_type: float
+    input_type: input
+    
+  - unique_id: Apparent power
+    unit: VA
+    value: P
+    address: 18
+    data_type: float
+    input_type: input
+
+  - unique_id: Reactive power
+    unit: VAr
+    value: 0
+    address: 25
+    data_type: float
+    input_type: input
+    
+  - unique_id: Power factor
+    unit: ''
+    value: 1
+    address: 31
+    data_type: float
+    input_type: input
+    
+  - unique_id: Frequency
+    unit: Hz
+    value: 50
+    address: 71
+    data_type: float
+    input_type: input
+    
+  - unique_id: Import active energy
+    unit: kwh
+    value: 0
+    address: 73
+    data_type: float
+    input_type: input
+    
+  - unique_id: Export active energ
+    unit: kwh
+    value: 0
+    address: 75
+    data_type: float
+    input_type: input
+    
