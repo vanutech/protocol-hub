@@ -34,28 +34,28 @@ prcl: #protocol
     data_type: float
     input_type: input
 
-  - unique_id: Active power
+  - unique_id: Power
     unit: W
     value: P
     address: 12
     data_type: float
     input_type: input
     
-  - unique_id: Apparent power
-    unit: VA
-    value: P
-    address: 18
-    data_type: float
-    input_type: input
+  # - unique_id: Apparent power
+  #   unit: VA
+  #   value: P
+  #   address: 18
+  #   data_type: float
+  #   input_type: input
 
-  - unique_id: Reactive power
-    unit: VAr
-    value: 0
-    address: 25
-    data_type: float
-    input_type: input
+  # - unique_id: Reactive power
+  #   unit: VAr
+  #   value: 0
+  #   address: 25
+  #   data_type: float
+  #   input_type: input
     
-  - unique_id: Power factor
+  - unique_id: powerfactor_1
     unit: ''
     value: 1
     address: 31
@@ -69,14 +69,14 @@ prcl: #protocol
     data_type: float
     input_type: input
     
-  - unique_id: Import active energy
+  - unique_id: Energy_Import
     unit: kwh
     value: 0
     address: 73
     data_type: float
     input_type: input
     
-  - unique_id: Export active energ
+  - unique_id: Energy_Export
     unit: kwh
     value: 0
     address: 75
