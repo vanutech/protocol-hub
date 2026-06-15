@@ -22,6 +22,12 @@ pa: E
 adr: !parameter
 
 prcl: #protocol
+  - name: start
+    value: 0
+    address: 0
+    data_type: uint16
+    input_type: input
+
   - name: Voltage
     unit: V
     value: U
@@ -82,6 +88,20 @@ prcl: #protocol
     unit: kwh
     value: EX
     address: 75
+    data_type: float
+    input_type: input
+
+  - name: Total active energy
+    unit: kwh
+    value: EI
+    address: 343
+    data_type: float
+    input_type: input
+    
+  - name: total reactive  energ
+    unit: kwh
+    value: 0
+    address: 345
     data_type: float
     input_type: input
     
