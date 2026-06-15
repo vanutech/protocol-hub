@@ -73,14 +73,14 @@ prcl: #protocol
     
   - name: Import active energy
     unit: kwh
-    value: 0
+    value: EI
     address: 73
     data_type: float
     input_type: input
     
   - name: Export active energ
     unit: kwh
-    value: 0
+    value: EX
     address: 75
     data_type: float
     input_type: input
