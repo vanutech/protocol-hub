@@ -31,7 +31,7 @@ prcl: #protocol
     input_type: input
     endianness: big-endian
 
-  - name: Current
+  - name: Current #doens't change sign
     unit: A
     value: I
     address: 6
@@ -42,7 +42,7 @@ prcl: #protocol
   - name: Active power
     unit: W
     value: P
-    address: 11
+    address: 12
     data_type: float
     input_type: input
     endianness: big-endian
@@ -50,7 +50,7 @@ prcl: #protocol
   - name: Apparent power
     unit: VA
     value: P
-    address: 17
+    address: 18
     data_type: float
     input_type: input
     endianness: big-endian
@@ -63,7 +63,7 @@ prcl: #protocol
     input_type: input
     endianness: big-endian
     
-  - name: Power factor
+  - name: Power factor #changes sign
     unit: ''
     value: 1
     address: 30
