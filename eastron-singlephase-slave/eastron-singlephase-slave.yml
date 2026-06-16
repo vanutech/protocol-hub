@@ -22,86 +22,81 @@ pa: E
 adr: !parameter
 
 prcl: #protocol
-  - name: start
-    value: 0
-    address: 0
-    data_type: uint16
-    input_type: input
 
   - name: Voltage
     unit: V
     value: U
-    address: 1
+    address: 0 # adress 1
     data_type: float
     input_type: input
 
   - name: Current
     unit: A
     value: I
-    address: 7
+    address: 6
     data_type: float
     input_type: input
 
   - name: Active power
     unit: W
     value: P
-    address: 12
+    address: 11
     data_type: float
     input_type: input
     
   - name: Apparent power
     unit: VA
     value: P
-    address: 18
+    address: 17
     data_type: float
     input_type: input
 
   - name: Reactive power
     unit: VAr
     value: 0
-    address: 25
+    address: 24
     data_type: float
     input_type: input
     
   - name: Power factor
     unit: ''
     value: 1
-    address: 31
+    address: 30
     data_type: float
     input_type: input
     
   - name: Frequency
     unit: Hz
     value: 50
-    address: 71
+    address: 70
     data_type: float
     input_type: input
     
   - name: Import active energy
     unit: kwh
     value: EI
-    address: 73
+    address: 72
     data_type: float
     input_type: input
     
   - name: Export active energ
     unit: kwh
     value: EX
-    address: 75
+    address: 74
     data_type: float
     input_type: input
 
   - name: Total active energy
     unit: kwh
     value: EI
-    address: 343
+    address: 342
     data_type: float
     input_type: input
     
   - name: total reactive  energ
     unit: kwh
     value: 0
-    address: 345
+    address: 344
     data_type: float
     input_type: input
     
