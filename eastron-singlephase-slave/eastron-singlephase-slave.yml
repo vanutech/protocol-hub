@@ -29,6 +29,7 @@ prcl: #protocol
     address: 0 # adress 1
     data_type: float
     input_type: input
+    endianness: big-endian
 
   - name: Current
     unit: A
@@ -36,6 +37,7 @@ prcl: #protocol
     address: 6
     data_type: float
     input_type: input
+    endianness: big-endian
 
   - name: Active power
     unit: W
@@ -43,6 +45,7 @@ prcl: #protocol
     address: 11
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: Apparent power
     unit: VA
@@ -50,6 +53,7 @@ prcl: #protocol
     address: 17
     data_type: float
     input_type: input
+    endianness: big-endian
 
   - name: Reactive power
     unit: VAr
@@ -57,6 +61,7 @@ prcl: #protocol
     address: 24
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: Power factor
     unit: ''
@@ -64,6 +69,7 @@ prcl: #protocol
     address: 30
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: Frequency
     unit: Hz
@@ -71,6 +77,7 @@ prcl: #protocol
     address: 70
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: Import active energy
     unit: kwh
@@ -78,6 +85,7 @@ prcl: #protocol
     address: 72
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: Export active energ
     unit: kwh
@@ -85,6 +93,7 @@ prcl: #protocol
     address: 74
     data_type: float
     input_type: input
+    endianness: big-endian
 
   - name: Total active energy
     unit: kwh
@@ -92,6 +101,7 @@ prcl: #protocol
     address: 342
     data_type: float
     input_type: input
+    endianness: big-endian
     
   - name: total reactive  energ
     unit: kwh
@@ -99,4 +109,5 @@ prcl: #protocol
     address: 344
     data_type: float
     input_type: input
+    endianness: big-endian
     
