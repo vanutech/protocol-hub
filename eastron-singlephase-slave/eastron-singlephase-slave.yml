@@ -49,7 +49,7 @@ prcl: #protocol
     
   - name: Apparent power
     unit: VA
-    value: P
+    value: S
     address: 18
     data_type: float
     input_type: input
@@ -65,7 +65,7 @@ prcl: #protocol
     
   - name: Power factor #changes sign
     unit: ''
-    value: 1
+    value: PF
     address: 30
     data_type: float
     input_type: input
