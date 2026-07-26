@@ -33,9 +33,5 @@ prcl: #protocol
     input_type: input
 
 
-  - name: End
-    address: 70
-    data_type: uint16
-    input_type: input
 
 
