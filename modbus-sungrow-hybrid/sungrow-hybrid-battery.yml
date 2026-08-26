@@ -8,7 +8,7 @@
 
 pri: sensor
 
-type: pv
+type: battery
 # possible typs
 # mainmeter, pv, battery, usage, charger
 
