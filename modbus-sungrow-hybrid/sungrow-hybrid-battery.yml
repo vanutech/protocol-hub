@@ -1,0 +1,65 @@
+# Zato Sungrow inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: sensor
+
+type: pv
+# possible typs
+# mainmeter, pv, battery, usage, charger
+
+host: !parameter
+adr: !parameter
+port: 502
+prcl: #protocol
+
+
+  - name: Battery level
+    unique_id: soc
+    unit: '%'
+    address: 13022 # reg 13023
+    data_type: uint16
+    scale: 0.1
+    input_type: input
+
+  - name: battery power
+    unique_id: Power
+    address: 13021 #reg 13022
+    data_type: uint16 
+    input_type: input
+
+  #always put sign after power
+  - unique_id: SignPower
+    value-on: 0b100  # second bit high means discahring
+    value-off: 0
+    address: 13000 # reg 13001
+    data_type: boolbit
+    input_type: input
+
+  - name: Battery voltage
+    unique_id: Voltage
+    address: 13019 # reg 13020
+    data_type: uint16
+    input_type: input
+    divide: 10
+
+  - name: Total battery charge
+    unit: kWh
+    unique_id: Energy_charge
+    address: 13012 # reg 13013
+    data_type: uint32
+    scale: 0.1
+    input_type: input
+
+
+  - name: Total battery discharge
+    unit: kWh
+    unique_id: Energy_discharge
+    address: 13026 # reg 13027
+    data_type: uint32
+    scale: 0.1
+    input_type: input

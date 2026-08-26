@@ -1,0 +1,43 @@
+# Zato Sungrow inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: sensor
+
+type: pv
+# possible typs
+# mainmeter, pv, battery, usage, charger
+
+host: !parameter
+adr: !parameter
+port: 502
+prcl: #protocol
+
+  - name: Nominal active power
+    unique_id: NominalPower
+    address: 5000  # reg 5001
+    data_type: uint16
+    input_type: input
+    scale: 0.1
+
+  - name: Total PV generation & battery discharge
+    unique_id: Energy
+    address: 5003 # reg 5004
+    input_type: input
+    data_type: uint32
+    scale: 0.1
+    endianness: little-endian
+    
+
+  - name: Total DC power
+    unique_id: Power
+    address: 5016 # reg 5017
+    input_type: input
+    data_type: uint32
+    scale: 1
+    endianness: little-endian
+    

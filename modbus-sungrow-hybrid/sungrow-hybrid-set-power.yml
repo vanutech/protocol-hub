@@ -1,0 +1,44 @@
+# Zato Sungrow inverter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2026-08-26
+#
+# Note: 
+
+
+pri: actuator
+
+type: SetPower
+subtype: BatterytLimit
+
+# link to sensor
+linkse: solis-rhi-battery-sensor
+
+
+host: !parameter
+adr: !parameter
+port: 502
+
+prcl: #protocol
+
+  - value: enable
+    value-on: 3
+    value-off: 0
+    address: 13049 # reg 13050
+    input_type: holding
+    data_type: bool
+
+
+  #always put sign after power
+  - value: SignPower
+    value-on: 0xBB # discharge is positive
+    value-off: 0xAA
+    address: 13050 # reg 13051
+    data_type: bool
+    input_type: holding
+
+  - name: battery power
+    value: Power
+    address: 13051 # reg 13052
+    input_type: holding
+    data_type: uint16
