@@ -12,7 +12,7 @@ type: SetPower
 subtype: BatterytLimit
 
 # link to sensor
-linkse: solis-rhi-battery-sensor
+linkse: sungrow-hybrid-battery
 
 
 host: !parameter
