@@ -1,0 +1,279 @@
+acrel-singlephase:
+  actuators: {}
+  name: Acrel Singlephase meter
+  path: acrel-singlephase
+  sensor:
+    acrel-singlephase.yml:
+      path: acrel-singlephase.yml
+      type: mainmeter
+  type: modbus
+acrel-singlephase-slave:
+  actuators:
+    acrel-singlephase-slave.yml:
+      path: acrel-singlephase-slave.yml
+      type: SyncMeter
+  name: Acrel Singlephase slave meter
+  path: acrel-singlephase-slave
+  sensor: {}
+  type: modbus
+alfen-charger:
+  actuators:
+    alfen-charger_act.yml:
+      path: alfen-charger_act.yml
+      type: SetPower
+  name: Alfen charger
+  path: alfen-charger
+  sensor:
+    alfen-charger-sensor.yml:
+      path: alfen-charger-sensor.yml
+      type: charger
+  type: modbusTCP
+alfen-modbus-meter-slave:
+  actuators:
+    alfen-modbus-meter.yml:
+      path: alfen-modbus-meter.yml
+      type: SyncMeter
+  name: Alfen modbus meter
+  path: alfen-modbus-meter-slave
+  sensor: {}
+  type: modbusTCP
+anker-solix-solarbank:
+  actuators:
+    anker-solix-solarbank-set-power.yml:
+      path: anker-solix-solarbank-set-power.yml
+      type: SetPower
+  name: Anker solix solarbank
+  path: anker-solix-solarbank
+  sensor:
+    anker-solix-solarbank-sensor.yml:
+      path: anker-solix-solarbank-sensor.yml
+      type: battery
+  type: modbus
+chint_ddsu666:
+  actuators: {}
+  name: Chint DDSU666 single phase meter
+  path: chint_ddsu666
+  sensor:
+    chint-ddsu666.yml:
+      path: chint-ddsu666.yml
+      type: mainmeter
+  type: modbus
+chint_ddsu666-slave:
+  actuators:
+    chint-ddsu666-slave.yml:
+      path: chint-ddsu666-slave.yml
+      type: SyncMeter
+  name: Chint DDSU666 single phase slave meter
+  path: chint_ddsu666-slave
+  sensor: {}
+  type: modbus
+chint_dtsu666-slave:
+  actuators:
+    chint-dtsu666-slave.yml:
+      path: chint-dtsu666-slave.yml
+      type: SyncMeter
+  name: Chint DTSU666 slave meter
+  path: chint_dtsu666-slave
+  sensor: {}
+  type: modbus
+eastron-singlephase:
+  actuators: {}
+  name: Eastron Singlephase meter
+  path: eastron-singlephase
+  sensor:
+    eastron-singlephase.yml:
+      path: eastron-singlephase.yml
+      type: mainmeter
+  type: modbus
+eastron-singlephase-slave:
+  actuators:
+    eastron-singlephase-slave.yml:
+      path: eastron-singlephase-slave.yml
+      type: SyncMeter
+  name: Eastron Singlephase slave meter
+  path: eastron-singlephase-slave
+  sensor: {}
+  type: modbus
+goodwe-et-family:
+  actuators: {}
+  name: Goodwe ET family inverters
+  path: goodwe-et-family
+  sensor:
+    goodwe-et-bat.yml:
+      path: goodwe-et-bat.yml
+      type: battery
+    goodwe-et-pv.yml:
+      path: goodwe-et-pv.yml
+      type: pv
+  type: modbus
+growatt-PH-tl3:
+  actuators: {}
+  name: Growatt SPH hybrid inverter
+  path: growatt-PH-tl3
+  sensor:
+    growat-ph-tl3.yml:
+      path: growat-ph-tl3.yml
+      type: pv
+    growat-ph-tl3_bat.yml:
+      path: growat-ph-tl3_bat.yml
+      type: battery
+  type: modbus
+growatt-tlx-min:
+  actuators:
+    growatt-tlx-min-export-limit-act.yml:
+      path: growatt-tlx-min-export-limit-act.yml
+      type: PowerLimit
+    growatt-tlx-min-set-power.yml:
+      path: growatt-tlx-min-set-power.yml
+      type: SetPower
+  name: Growatt TLX min hybrid inverter
+  path: growatt-tlx-min
+  sensor:
+    growatt-tlx-min-battery-sensor.yml:
+      path: growatt-tlx-min-battery-sensor.yml
+      type: battery
+    growatt-tlx-min-pv-sensor.yml:
+      path: growatt-tlx-min-pv-sensor.yml
+      type: pv
+  type: modbus
+huawei-sun2000-pv:
+  actuators: {}
+  name: Huawei SUN2000 PV inverter
+  path: huawei-sun2000-pv
+  sensor:
+    huawei-sun2000-pv.yml:
+      path: huawei-sun2000-pv.yml
+      type: pv
+  type: modbus
+huawei-sun2000-pv-tcp:
+  actuators: {}
+  name: Huawei SUN2000 PV inverter
+  path: huawei-sun2000-pv-tcp
+  sensor:
+    huawei-sun2000-pv-tcp.yml:
+      path: huawei-sun2000-pv-tcp.yml
+      type: pv
+  type: modbusTCP
+maerstek-venuse:
+  actuators:
+    maerstek-venus-set-power.yml:
+      path: maerstek-venus-set-power.yml
+      type: SetPower
+  name: Maerstek Venus-E plugin battery
+  path: maerstek-venuse
+  sensor:
+    maerstek-venus-sensor.yml:
+      path: maerstek-venus-sensor.yml
+      type: battery
+  type: modbusTCP
+maerstek-venuse-rtu:
+  actuators:
+    maerstek-venus-set-power.yml:
+      path: maerstek-venus-set-power.yml
+      type: SetPower
+  name: Maerstek Venus-E plugin battery
+  path: maerstek-venuse-rtu
+  sensor:
+    maerstek-venus-sensor.yml:
+      path: maerstek-venus-sensor.yml
+      type: battery
+  type: modbus
+modbus-rtu-sungrow-pvgrid:
+  actuators:
+    modbus-sungrow-pvgrid-actuator.yml:
+      path: modbus-sungrow-pvgrid-actuator.yml
+      type: PowerLimit
+  name: sungrow PV Grid inverters
+  path: modbus-rtu-sungrow-pvgrid
+  sensor:
+    modbus-sungrow-pvgrid.yml:
+      path: modbus-sungrow-pvgrid.yml
+      type: pv
+  type: modbus
+modbus-sungrow-hybrid:
+  actuators:
+    sungrow-hybrid-set-power.yml:
+      path: sungrow-hybrid-set-power.yml
+      type: SetPower
+  name: sungrow Hybrid inverters
+  path: modbus-sungrow-hybrid
+  sensor:
+    sungrow-hybrid-battery.yml:
+      path: sungrow-hybrid-battery.yml
+      type: battery
+    sungrow-hybrid-pv.yml:
+      path: sungrow-hybrid-pv.yml
+      type: pv
+  type: modbusTCP
+modbus-sungrow-pvgrid:
+  actuators:
+    modbus-sungrow-pvgrid-actuator.yml:
+      path: modbus-sungrow-pvgrid-actuator.yml
+      type: PowerLimit
+  name: sungrow PV Grid inverters
+  path: modbus-sungrow-pvgrid
+  sensor:
+    modbus-sungrow-pvgrid.yml:
+      path: modbus-sungrow-pvgrid.yml
+      type: pv
+  type: modbusTCP
+saj-as2:
+  actuators: {}
+  name: SAJ HS2 AS2 inverter
+  path: saj-as2
+  sensor:
+    saj-has2-bat.yml:
+      path: saj-has2-bat.yml
+      type: pv
+    saj-has2-pv.yml:
+      path: saj-has2-pv.yml
+      type: pv
+  type: modbusTCP
+solis-rai:
+  actuators:
+    solis-rai-set-power.yml:
+      path: solis-rai-set-power.yml
+      type: SetPower
+  name: Solis Rai battery inverter
+  path: solis-rai
+  sensor:
+    solis-rai.yml:
+      path: solis-rai.yml
+      type: battery
+  type: modbus
+solis-rai-mainmeter:
+  actuators: {}
+  name: Solis RAI meter info
+  path: solis-rai-mainmeter
+  sensor:
+    solis-rai-mainmetersensor.yml:
+      path: solis-rai-mainmetersensor.yml
+      type: mainmeter
+  type: modbus
+solis-rhi:
+  actuators:
+    solis-rhi-export-limit-act.yml:
+      path: solis-rhi-export-limit-act.yml
+      type: PowerLimit
+    solis-rhi-set-power.yml:
+      path: solis-rhi-set-power.yml
+      type: SetPower
+  name: Solis RHI hybride inverter
+  path: solis-rhi
+  sensor:
+    solis-rhi-battery-sensor.yml:
+      path: solis-rhi-battery-sensor.yml
+      type: battery
+    solis-rhi-pv-sensor.yml:
+      path: solis-rhi-pv-sensor.yml
+      type: pv
+  type: modbus
+solis-rhi-mainmeter:
+  actuators: {}
+  name: Solis RHI meter info
+  path: solis-rhi-mainmeter
+  sensor:
+    solis-rhi-mainmetersensor.yml:
+      path: solis-rhi-mainmetersensor.yml
+      type: mainmeter
+  type: modbus
