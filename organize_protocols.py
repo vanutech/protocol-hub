@@ -86,7 +86,7 @@ def organize_protocols():
             protocolinfo["path"] = dir_path
             protocolinfo["name"] = info["name"]
             protocolinfo["type"] = info["type"]
-            protocolinfo["sensor"] = sensors
+            protocolinfo["sensors"] = sensors
             protocolinfo["actuators"] = actuators
 
             protocolinfos[dir_path] = protocolinfo
