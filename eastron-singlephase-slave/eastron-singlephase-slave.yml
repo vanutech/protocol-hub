@@ -28,7 +28,7 @@ prcl: #protocol
     value: 17096
     address: 50 # adress 51
     data_type: uint32
-    input_type: input
+    input_type: holding
     endianness: big-endian
 
   - name: Voltage
