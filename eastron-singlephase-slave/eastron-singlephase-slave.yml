@@ -22,6 +22,14 @@ pa: E
 adr: !parameter
 
 prcl: #protocol
+#holding identifiers
+
+  - name: Needed
+    value: 17096
+    address: 50 # adress 51
+    data_type: uint32
+    input_type: input
+    endianness: big-endian
 
   - name: Voltage
     unit: V
