@@ -1,0 +1,123 @@
+# Zato Eastron single phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2024-08-19
+#
+# Note: 
+
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+prcl: #protocol
+
+
+  - unique_id: Voltage_1
+    unit: V
+    value: U
+    address: 0
+    data_type: float
+    input_type: input
+  - unique_id: Voltage_2
+    unit: V
+    value: U
+    address: 2
+    data_type: float
+    input_type: input
+  - unique_id: Voltage_3
+    unit: V
+    value: U
+    address: 4
+    data_type: float
+    input_type: input
+
+  - unique_id: Current_1
+    unit: A
+    value: I
+    address: 6
+    data_type: float
+    input_type: input
+  - unique_id: Current_2
+    unit: A
+    value: I
+    address: 8
+    data_type: float
+    input_type: input
+  - unique_id: Current_3
+    unit: A
+    value: I
+    address: 10
+    data_type: float
+    input_type: input
+
+  - unique_id: Power_1
+    unit: W
+    value: P
+    address: 12
+    data_type: float
+    input_type: input
+
+  - unique_id: Power_2
+    unit: W
+    value: P
+    address: 14
+    data_type: float
+    input_type: input
+
+  - unique_id: Power_3
+    unit: W
+    value: P
+    address: 16
+    data_type: float
+    input_type: input
+
+    
+  # - unique_id: Apparent power
+  #   unit: VA
+  #   value: P
+  #   address: 18
+  #   data_type: float
+  #   input_type: input
+
+  # - unique_id: Reactive power
+  #   unit: VAr
+  #   value: 0
+  #   address: 25
+  #   data_type: float
+  #   input_type: input
+    
+  - unique_id: powerfactor_1
+    address: 30
+    data_type: float
+    input_type: input
+    
+  - unique_id: Power
+    unit: W
+    value: P
+    address: 52
+    data_type: float
+    input_type: input
+    
+  - unique_id: Frequency
+    address: 70
+    data_type: float
+    input_type: input
+    
+  - unique_id: Energy_Import
+    address: 72
+    data_type: float
+    input_type: input
+    
+  - unique_id: Energy_Export
+    address: 74
+    data_type: float
+    input_type: input
+    

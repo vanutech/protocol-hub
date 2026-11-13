@@ -21,22 +21,16 @@ prcl: #protocol
 
 
   - unique_id: Voltage
-    unit: V
-    value: U
-    address: 1
+    address: 0
     data_type: float
     input_type: input
 
   - unique_id: Current
-    unit: A
-    value: I
-    address: 7
+    address: 6
     data_type: float
     input_type: input
 
   - unique_id: Power
-    unit: W
-    value: P
     address: 12
     data_type: float
     input_type: input
@@ -56,30 +50,26 @@ prcl: #protocol
   #   input_type: input
     
   - unique_id: powerfactor_1
-    unit: ''
-    value: 1
-    address: 31
+    address: 30
     data_type: float
     input_type: input
     
   - unique_id: Frequency
-    unit: Hz
-    value: 50
-    address: 71
+    address: 70
     data_type: float
     input_type: input
     
   - unique_id: Energy_Import
     unit: kwh
     value: 0
-    address: 73
+    address: 72
     data_type: float
     input_type: input
     
   - unique_id: Energy_Export
     unit: kwh
     value: 0
-    address: 75
+    address: 74
     data_type: float
     input_type: input
     
