@@ -94,6 +94,15 @@ eastron-singlephase-slave:
   path: eastron-singlephase-slave
   sensors: {}
   type: modbus
+eastron-threephase:
+  actuators: {}
+  name: Eastron Threephase meter
+  path: eastron-threephase
+  sensors:
+    eastron-threephase.yml:
+      path: eastron-threephase.yml
+      type: mainmeter
+  type: modbus
 goodwe-et-family:
   actuators: {}
   name: Goodwe ET family inverters
