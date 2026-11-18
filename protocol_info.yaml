@@ -67,6 +67,15 @@ chint_ddsu666-slave:
   path: chint_ddsu666-slave
   sensors: {}
   type: modbus
+chint_dtsu666:
+  actuators: {}
+  name: Chint DTSU666 three phase meter
+  path: chint_dtsu666
+  sensors:
+    chint-dtsu666.yml:
+      path: chint-dtsu666.yml
+      type: mainmeter
+  type: modbus
 chint_dtsu666-slave:
   actuators:
     chint-dtsu666-slave.yml:

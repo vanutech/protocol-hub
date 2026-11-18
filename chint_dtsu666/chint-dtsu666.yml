@@ -1,0 +1,109 @@
+# Zato chint three phase meter integration
+# 
+# by Wouter vanoverberghe
+# last update: 2026-11-18
+#
+# Note: 
+
+
+pri: sensor
+
+#connection specifics (modbus)
+Bd: 9600
+by: 8
+pa: N
+
+#device specifics
+adr: !parameter
+type: mainmeter
+
+prcl: #protocol
+  - unique_id: Voltage_1
+    address: 8197  #adress 2006H - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+  - unique_id: Voltage_2
+    address: 8199  #adress 2008H - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+  - unique_id: Voltage_3
+    address: 8201  #adress 200AH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+
+  - unique_id: Current_1
+    address: 8203  #adress 200CH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+  - unique_id: Current_2
+    address: 8205  #adress 200EH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+  - unique_id: Current_3
+    address: 8207  #adress 2010H - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+    
+
+
+  - unique_id: Power
+    address: 8209  #adress 2012H - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian
+
+ 
+  - unique_id: PF
+    address: 8233  #adress 202AH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian     
+    
+  - unique_id: powerfactor_1
+    address: 8235   #adress 202CH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: powerfactor_2
+    address: 8237   #adress 202EH - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: powerfactor_3
+    address: 8239   #adress 2030H - 1
+    data_type: float
+    input_type: holding
+    endianness: big-endian    
+
+  - name: Frequency
+    address: 8260  #adress 2044H -1
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+
+  - unique_id: Energy_inport
+    address: 16413  #adress 401EH -1
+    data_type: float
+    input_type: holding
+    endianness: big-endian   
+
+  - unique_id: Energy_export
+    address: 16423  #adress 4028H -1
+    data_type: float
+    input_type: holding
+    endianness: big-endian  
+    
+
